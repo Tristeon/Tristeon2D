@@ -1,14 +1,18 @@
 ﻿#include "MovementBehaviour.h"
-#include "Player.h"
 #include "Actors/Actor.h"
+#include "Input/Keyboard.h"
 #include "Physics/Collider.h"
 #include "Physics/PhysicsWorld.h"
+#include "Rendering/GameView.h"
 
 namespace Tristeon
 {
 	void MovementBehaviour::update()
 	{
 		isGrounded = PhysicsWorld::raycast(getOwner()->position, Vector2::down(), groundCheckDistance);
+
+		float const horizontal = Keyboard::held(Keyboard::D) - Keyboard::held(Keyboard::A);
+		//getPlayer()->physicsBody->applyForce(Vector2(horizontal, 0) * GameView::deltaTime() * movementSpeed);
 	}
 
 	json MovementBehaviour::serialize()
@@ -43,4 +47,9 @@ namespace Tristeon
 	void MovementBehaviour::tileContactEnd(TileContact const& contact)
 	{
 	}
+
+	//Player* MovementBehaviour::getPlayer() const
+	//{
+	//	return getOwner<Player>();
+	//}
 }

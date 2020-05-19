@@ -20,7 +20,7 @@ namespace Tristeon
 		void start() override;
 		
 		PhysicsBody* physicsBody = nullptr;
-		MovementBehaviour* movementsBehaviour = nullptr;
+		MovementBehaviour* movementBehaviour = nullptr;
 		BoxCollider* boxCollider = nullptr;
 	};
 }
