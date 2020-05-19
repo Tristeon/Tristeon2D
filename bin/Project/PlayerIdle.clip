@@ -1,9 +1,9 @@
 {
-    "cols": 13,
-    "endIndex": 20,
-    "loops": true,
+    "cols": 20,
+    "endIndex": 0,
+    "loops": false,
     "playbackRate": 1.0,
-    "rows": 8,
+    "rows": 1,
     "spacing": {
         "bottom": 0,
         "horizontalFrame": 0,
@@ -12,7 +12,7 @@
         "top": 0,
         "verticalFrame": 0
     },
-    "startIndex": 13,
-    "texturePath": "Project/Character.png",
+    "startIndex": 0,
+    "texturePath": "Project/PlayerWalking.png",
     "typeID": "Tristeon::AnimationClip"
 }

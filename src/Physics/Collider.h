@@ -12,8 +12,6 @@
 
 namespace Tristeon
 {
-	class Rigidbody;
-
 	/**
 	 * Base class for 2D Physics shape definitions.
 	 *
