@@ -11,10 +11,12 @@
 
 namespace Tristeon
 {
+	class Player;
+
 	class MovementBehaviour : public Behaviour, public IUpdate, public IContactBegin, public IContactEnd, public ITileContactBegin, public ITileContactEnd
 	{
 		REGISTER_BEHAVIOUR_H(MovementBehaviour)
-		REGISTER_TYPE_H(MovementBehaviour)
+			REGISTER_TYPE_H(MovementBehaviour)
 	public:
 		void update() override;
 
@@ -25,9 +27,11 @@ namespace Tristeon
 		void contactEnd(Collider* other) override;
 		void tileContactBegin(TileContact const& contact) override;
 		void tileContactEnd(TileContact const& contact) override;
-		
+
 		bool isGrounded;
 	private:
+
+		Player* getPlayer() const { return getOwner<Player>(); }
 		float groundCheckDistance = 32;
 		float movementSpeed = 0;
 		float jumpSpeed = 0;

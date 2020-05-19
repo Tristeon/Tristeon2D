@@ -38,7 +38,10 @@ namespace Tristeon
 		/**
 		 * Behaviours are owned by an actor. This value is never nullptr.
 		 */
-		Actor* owner() const { return _owner; }
+		Actor* getOwner() const { return _owner; }
+
+		template <typename T>
+		T* getOwner() const { return dynamic_cast<T*>(_owner); }
 	private:
 		Actor* _owner = nullptr;
 	};
