@@ -63,18 +63,18 @@ namespace Tristeon
 		 * Gets the first behaviour of type T. nullptr if no behaviour of type T was found.
 		 */
 		template<typename T>
-		IsBehaviour<T>* behaviour();
+		IsBehaviour<T>* getBehaviour();
 
 		/**
 		 * Gets a list of all the behaviours of type T. Returns an empty list if no behaviour of type T was found.
 		 */
 		template<typename T>
-		Vector<T*> behaviours();
+		Vector<T*> getBehaviours();
 
 		/**
 		 * Gets a list with all of the actor's behaviours.
 		 */
-		Vector<Behaviour*> behaviours();
+		Vector<Behaviour*> getBehaviours();
 		
 		/**
 		 * Adds a new behaviour of type T and returns the new behaviour.
@@ -101,7 +101,7 @@ namespace Tristeon
 	};
 
 	template <typename T>
-	IsBehaviour<T>* Actor::behaviour()
+	IsBehaviour<T>* Actor::getBehaviour()
 	{
 		for (auto const& behaviour : _behaviours)
 		{
@@ -113,7 +113,7 @@ namespace Tristeon
 	}
 
 	template <typename T>
-	Vector<T*> Actor::behaviours()
+	Vector<T*> Actor::getBehaviours()
 	{
 		Vector<T*> behaviours;
 

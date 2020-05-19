@@ -22,7 +22,7 @@ namespace Tristeon
 
 	void TestBehaviour::start()
 	{
-		body = owner()->behaviour<PhysicsBody>();
+		body = owner()->getBehaviour<PhysicsBody>();
 	}
 
 	int r = 0;

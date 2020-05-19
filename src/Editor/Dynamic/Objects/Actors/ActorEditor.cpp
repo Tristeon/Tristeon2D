@@ -116,7 +116,7 @@ namespace TristeonEditor
 		behavioursArea->setLayout(areaLayout);
 		layout->addWidget(behavioursArea);
 
-		for (auto* behaviour : actor->behaviours())
+		for (auto* behaviour : actor->getBehaviours())
 			addBehaviour(behaviour);
 
 		scroll->setWidget(behavioursArea);
