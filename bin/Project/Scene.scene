@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": 3992,
-            "y": 470
+            "x": 222,
+            "y": 217
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -11,7 +11,7 @@
             "y": 1080
         },
         "typeID": "Tristeon::Camera",
-        "zoom": 0.8427165746688843
+        "zoom": 1.7000000476837158
     },
     "hud": {
         "typeID": "Tristeon::HUD"
@@ -32,8 +32,8 @@
                     "name": "Image",
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 976.7301635742188,
-                        "y": 476.09771728515625
+                        "x": 1265.8651123046875,
+                        "y": 459.30303955078125
                     },
                     "rotation": 0.0,
                     "scale": {
@@ -4452,8 +4452,8 @@
                     "name": "Player",
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 67.72317504882813,
-                        "y": 189.16961669921875
+                        "x": 87.59312438964844,
+                        "y": 335.08709716796875
                     },
                     "rotation": 0.0,
                     "scale": {

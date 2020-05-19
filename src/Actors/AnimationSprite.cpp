@@ -61,7 +61,7 @@ namespace Tristeon
 		if (clip == nullptr)
 			return;
 
-		if (clip->startIndex + floor(currentFrame) > clip->endIndex)
+		if (clip->startIndex + floor(currentFrame) >= clip->endIndex)
 		{
 			if (clip->loops)
 				currentFrame = 0;
