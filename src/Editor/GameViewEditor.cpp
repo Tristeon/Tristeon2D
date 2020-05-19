@@ -16,6 +16,7 @@ namespace TristeonEditor
 		setLayout(layout);
 
 		cameraController = std::make_unique<EditorCameraController>();
+		cameraController->editor = editor;
 	}
 
 	void GameViewEditor::paintGL()

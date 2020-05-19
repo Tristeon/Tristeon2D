@@ -16,6 +16,9 @@ namespace TristeonEditor
 		
 		handleScrolling();
 		handleDragging();
+
+		if (Keyboard::pressed(Keyboard::F) && editor->selectedActor() != nullptr)
+			Camera::main()->position = (Vector2Int)editor->selectedActor()->position;
 	}
 
 	void EditorCameraController::handleDragging()

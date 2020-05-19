@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": 332,
-            "y": 325
+            "x": 5356,
+            "y": 455
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -11,7 +11,7 @@
             "y": 1080
         },
         "typeID": "Tristeon::Camera",
-        "zoom": 1.5245921611785889
+        "zoom": 1.542124629020691
     },
     "hud": {
         "typeID": "Tristeon::HUD"
@@ -3323,8 +3323,8 @@
                     "tileSetID": -1
                 },
                 {
-                    "index": 31,
-                    "tileSetID": 26857
+                    "index": -1,
+                    "tileSetID": -1
                 },
                 {
                     "index": -1,
@@ -4502,6 +4502,37 @@
                         "y": 1.0
                     },
                     "typeID": "Tristeon::Actor"
+                },
+                {
+                    "behaviours": [
+                        {
+                            "nextScene": "scene2",
+                            "typeID": "Demo::NextLevelSign"
+                        }
+                    ],
+                    "colour": {
+                        "a": 1.0,
+                        "b": 1.0,
+                        "g": 1.0,
+                        "r": 1.0,
+                        "typeID": "Tristeon::Colour"
+                    },
+                    "height": 63,
+                    "name": "Next Level",
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 5647.44921875,
+                        "y": 509.7271728515625
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "texturePath": "project/nextlevelsign.png",
+                    "typeID": "Tristeon::Sprite",
+                    "width": 86
                 }
             ],
             "name": "Objects",

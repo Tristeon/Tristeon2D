@@ -139,6 +139,16 @@ namespace TristeonEditor
 			rotate->resize(size.x / 5.0f, size.y / 5.0f);
 			rotate->show();
 		}
+		else
+		{
+			outline->hide();
+			corner->hide();
+			rotate->hide();
+
+			dragging = false;
+			draggingCorner = false;
+			draggingRotate = false;
+		}
 	}
 
 	void ActorLayerSceneView::clickActor()
