@@ -160,15 +160,6 @@ namespace TristeonEditor
 				}
 			}
 		}
-
-		dragging = false;
-		draggingCorner = false;
-		draggingRotate = false;
-		
-		outline->hide();
-		corner->hide();
-		rotate->hide();
-		editor()->selectedActor(nullptr);
 	}
 }
 #endif
