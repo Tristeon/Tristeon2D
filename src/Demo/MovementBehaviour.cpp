@@ -16,7 +16,7 @@ namespace Tristeon
 		isGrounded = PhysicsWorld::raycast(getOwner()->position, Vector2::down(), groundCheckDistance);
 
 		float const horizontal = Keyboard::held(Keyboard::D) - Keyboard::held(Keyboard::A);
-		getOwner<Player>()->physicsBody->applyForce(Vector2(horizontal, 0) * GameView::deltaTime() * movementSpeed);
+		getOwner<Player>()->physicsBody->setVelocity(Vector2(horizontal, 0) * GameView::deltaTime() * movementSpeed);
 	}
 
 	json MovementBehaviour::serialize()

@@ -118,7 +118,7 @@ namespace Tristeon
 		return PhysicsWorld::metersToPixels(vel);
 	}
 
-	void PhysicsBody::velocity(Vector2 const& value)
+	void PhysicsBody::setVelocity(Vector2 const& value)
 	{
 		Vector2 const meterValue = PhysicsWorld::pixelsToMeters(value);
 		body->SetLinearVelocity(meterValue.convert<b2Vec2>());
@@ -129,7 +129,7 @@ namespace Tristeon
 		return _gravityScale;
 	}
 
-	void PhysicsBody::gravityScale(float const& value)
+	void PhysicsBody::setGravityScale(float const& value)
 	{
 		body->SetGravityScale(value);
 		_gravityScale = value;
@@ -140,7 +140,7 @@ namespace Tristeon
 		return _fixedRotation;
 	}
 
-	void PhysicsBody::fixedRotation(bool const& value)
+	void PhysicsBody::setFixedRotation(bool const& value)
 	{
 		body->SetFixedRotation(value);
 		_fixedRotation = value;
@@ -151,7 +151,7 @@ namespace Tristeon
 		return _linearDamping;
 	}
 
-	void PhysicsBody::linearDamping(float const& value)
+	void PhysicsBody::setLinearDamping(float const& value)
 	{
 		body->SetLinearDamping(value);
 		_linearDamping = value;
@@ -162,7 +162,7 @@ namespace Tristeon
 		return _angularDamping;
 	}
 
-	void PhysicsBody::angularDamping(float const& value)
+	void PhysicsBody::setAngularDamping(float const& value)
 	{
 		body->SetAngularDamping(value);
 		_angularDamping = value;
@@ -173,7 +173,7 @@ namespace Tristeon
 		return PhysicsWorld::metersToPixels(Vector2::convert(body->GetPosition()));
 	}
 
-	void PhysicsBody::position(Vector2 const& value)
+	void PhysicsBody::setPosition(Vector2 const& value)
 	{
 		Vector2 const meterValue = PhysicsWorld::pixelsToMeters(value);
 		body->SetTransform(meterValue.convert<b2Vec2>(), body->GetAngle());
@@ -184,7 +184,7 @@ namespace Tristeon
 		return -Math::toDegrees(body->GetAngle());
 	}
 
-	void PhysicsBody::rotation(float const& value)
+	void PhysicsBody::setRotation(float const& value)
 	{
 		float const radianValue = -Math::toRadians(value);
 		body->SetTransform(body->GetPosition(), radianValue);
@@ -195,7 +195,7 @@ namespace Tristeon
 		return _continuous;
 	}
 
-	void PhysicsBody::continuous(bool const& value)
+	void PhysicsBody::setContinuous(bool const& value)
 	{
 		body->SetBullet(value);
 		_continuous = value;
@@ -206,10 +206,10 @@ namespace Tristeon
 		return _enabled;
 	}
 
-	void PhysicsBody::enabled(bool const& value)
+	void PhysicsBody::setEnabled(bool const& value)
 	{
 		if (value)
-			position(getOwner()->position);
+			setPosition(getOwner()->position);
 		
 		body->SetEnabled(value);
 		_enabled = value;

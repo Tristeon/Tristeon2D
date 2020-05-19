@@ -1,5 +1,6 @@
 #include "NextLevelSign.h"
 #include "Physics/Collider.h"
+#include "Player.h"
 #include "Scenes/SceneManager.h"
 
 namespace Demo
@@ -22,9 +23,9 @@ namespace Demo
 
 	void NextLevelSign::sensorBegin(Tristeon::Collider* other)
 	{
-		//if (dynamic_cast<Player*>(other->owner()) != nullptr)
-		//{
-		//	Tristeon::SceneManager::load(nextScene);
-		//}
+		if (dynamic_cast<Tristeon::Player*>(other->getOwner()) != nullptr)
+		{
+			Tristeon::SceneManager::load(nextScene);
+		}
 	}
 }

@@ -11,7 +11,7 @@
             "y": 1080
         },
         "typeID": "Tristeon::Camera",
-        "zoom": 1.3712399005889893
+        "zoom": 1.399993658065796
     },
     "hud": {
         "typeID": "Tristeon::HUD"
@@ -4426,7 +4426,7 @@
                         },
                         {
                             "density": 1.0,
-                            "friction": 0.0,
+                            "friction": 1.0,
                             "height": 64.0,
                             "offset": {
                                 "typeID": "Tristeon::Vector2",

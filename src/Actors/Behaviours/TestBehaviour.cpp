@@ -39,7 +39,7 @@ namespace Tristeon
 		
 		bool grounded = PhysicsWorld::raycast(getOwner<Actor>()->position, Vector2::down(), groundedDistance);
 		if (Keyboard::pressed(Keyboard::Space) && grounded)
-			body->velocity({ body->velocity().x, jumpVelocity });
+			body->setVelocity({ body->velocity().x, jumpVelocity });
 
 		float const horizontal = Keyboard::held(Keyboard::D) - Keyboard::held(Keyboard::A);
 		body->applyForce(Vector2(horizontal, 0) * GameView::deltaTime() * runSpeed);
