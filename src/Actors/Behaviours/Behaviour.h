@@ -48,9 +48,9 @@ namespace Tristeon
 		return dynamic_cast<T*>(_owner);
 	}
 
-	//template <>
-	//inline Actor* Behaviour::getOwner()
-	//{
-	//	return _owner;
-	//}
+	template <>
+	inline Actor* Behaviour::getOwner() const
+	{
+		return _owner;
+	}
 }
