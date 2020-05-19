@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": 314,
-            "y": 282
+            "x": 332,
+            "y": 325
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -11,7 +11,7 @@
             "y": 1080
         },
         "typeID": "Tristeon::Camera",
-        "zoom": 1.399993658065796
+        "zoom": 1.5245921611785889
     },
     "hud": {
         "typeID": "Tristeon::HUD"
@@ -4416,17 +4416,17 @@
                     "behaviours": [
                         {
                             "angularDamping": 0.009999999776482582,
-                            "continuous": false,
+                            "continuous": true,
                             "enabled": true,
                             "fixedRotation": true,
-                            "gravityScale": 1.0,
+                            "gravityScale": 5.0,
                             "linearDamping": 0.0,
                             "type": 2,
                             "typeID": "Tristeon::PhysicsBody"
                         },
                         {
                             "density": 1.0,
-                            "friction": 1.0,
+                            "friction": 0.0,
                             "height": 64.0,
                             "offset": {
                                 "typeID": "Tristeon::Vector2",
@@ -4440,8 +4440,8 @@
                             "width": 64.0
                         },
                         {
-                            "groundCheckDistance": 32.0,
-                            "jumpSpeed": 0.0,
+                            "groundCheckDistance": 40.0,
+                            "jumpSpeed": 1400.0,
                             "movementSpeed": 64.0,
                             "typeID": "Tristeon::MovementBehaviour"
                         }
@@ -4458,8 +4458,8 @@
                     "name": "Player",
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 112.08071899414063,
-                        "y": 219.82489013671875
+                        "x": 64.39761352539063,
+                        "y": 191.168212890625
                     },
                     "rotation": 0.0,
                     "scale": {
@@ -4470,6 +4470,38 @@
                     "texturePath": "project/playerwalking.png",
                     "typeID": "Tristeon::Player",
                     "width": 64
+                },
+                {
+                    "behaviours": [
+                        {
+                            "density": 1.0,
+                            "friction": 0.0,
+                            "height": 1000.0,
+                            "offset": {
+                                "typeID": "Tristeon::Vector2",
+                                "x": 0.0,
+                                "y": 0.0
+                            },
+                            "restitution": 0.0,
+                            "rotationOffset": 0.0,
+                            "sensor": false,
+                            "typeID": "Tristeon::BoxCollider",
+                            "width": 64.0
+                        }
+                    ],
+                    "name": "Back Wall",
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": -64.0,
+                        "y": 0.0
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "typeID": "Tristeon::Actor"
                 }
             ],
             "name": "Objects",
