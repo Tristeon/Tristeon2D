@@ -9,7 +9,7 @@ namespace Tristeon
 	void Player::start()
 	{
 		physicsBody = getBehaviour<PhysicsBody>();
-		movementsBehaviour = getBehaviour<MovementBehaviour>();
+		movementBehaviour = getBehaviour<MovementBehaviour>();
 		boxCollider = getBehaviour<BoxCollider>();
 	}
 }

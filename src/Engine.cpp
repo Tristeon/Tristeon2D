@@ -77,7 +77,7 @@ namespace Tristeon
 				for (auto late : Collector<ILateUpdate>::all()) late->lateUpdate();
 			}
 
-			for (auto const& behaviour : destroyedBehaviours) behaviour->owner()->removeBehaviour(behaviour);
+			for (auto const& behaviour : destroyedBehaviours) behaviour->getOwner()->removeBehaviour(behaviour);
 			destroyedBehaviours.clear();
 			for (auto const& actor : destroyedActors) SceneManager::destroyActor(actor);
 			destroyedActors.clear();
