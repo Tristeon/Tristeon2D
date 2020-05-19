@@ -159,7 +159,7 @@ ivec2 tileTo2DIndex(int tile)
         return ivec2(-1, -1);
 
     int x = tile % tileSet.cols;
-    int y = tile / tileSet.rows;
+    int y = tile / tileSet.cols;
 
     return ivec2(x, y);
 }
