@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": 222,
-            "y": 217
+            "x": 314,
+            "y": 282
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -4413,33 +4413,7 @@
         {
             "actors": [
                 {
-                    "behaviours": [
-                        {
-                            "angularDamping": 0.019999999552965164,
-                            "continuous": false,
-                            "enabled": true,
-                            "fixedRotation": true,
-                            "gravityScale": 1.0,
-                            "linearDamping": 0.0,
-                            "type": 2,
-                            "typeID": "Tristeon::PhysicsBody"
-                        },
-                        {
-                            "density": 1.0,
-                            "friction": 0.0,
-                            "height": 64.0,
-                            "offset": {
-                                "typeID": "Tristeon::Vector2",
-                                "x": 0.0,
-                                "y": 0.0
-                            },
-                            "restitution": 0.0,
-                            "rotationOffset": 0.0,
-                            "sensor": false,
-                            "typeID": "Tristeon::BoxCollider",
-                            "width": 64.0
-                        }
-                    ],
+                    "behaviours": [],
                     "clipPath": "Project/PlayerIdle.clip",
                     "colour": {
                         "a": 1.0,
@@ -4452,8 +4426,8 @@
                     "name": "Player",
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 87.59312438964844,
-                        "y": 335.08709716796875
+                        "x": 112.08071899414063,
+                        "y": 219.82489013671875
                     },
                     "rotation": 0.0,
                     "scale": {
@@ -4462,7 +4436,7 @@
                         "y": 1.0
                     },
                     "texturePath": "project/playerwalking.png",
-                    "typeID": "Tristeon::AnimationSprite",
+                    "typeID": "Tristeon::Player",
                     "width": 64
                 }
             ],

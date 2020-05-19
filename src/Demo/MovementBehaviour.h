@@ -3,7 +3,6 @@
 #include <Serialization/TypeRegister.h>
 #include <Registers/BehaviourRegister.h>
 
-#include "Actors/Player.h"
 #include "Callbacks/IUpdate.h"
 #include "Physics/Callbacks/IContactBegin.h"
 #include "Physics/Callbacks/IContactEnd.h"
@@ -15,7 +14,7 @@ namespace Tristeon
 	class MovementBehaviour : public Behaviour, public IUpdate, public IContactBegin, public IContactEnd, public ITileContactBegin, public ITileContactEnd
 	{
 		REGISTER_BEHAVIOUR_H(MovementBehaviour)
-			REGISTER_TYPE_H(MovementBehaviour)
+		REGISTER_TYPE_H(MovementBehaviour)
 	public:
 		MovementBehaviour() = default;
 		virtual ~MovementBehaviour() = default;
@@ -33,7 +32,6 @@ namespace Tristeon
 		bool isGrounded = false;
 	private:
 
-		//Player* getPlayer() const;
 		float groundCheckDistance = 32;
 		float movementSpeed = 0;
 		float jumpSpeed = 0;

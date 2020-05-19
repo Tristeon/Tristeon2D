@@ -18,9 +18,22 @@ namespace Tristeon
 		virtual ~Player() = default;
 
 		void start() override;
+		json serialize() override;
 		
 		PhysicsBody* physicsBody = nullptr;
 		MovementBehaviour* movementBehaviour = nullptr;
 		BoxCollider* boxCollider = nullptr;
 	};
 }
+
+#ifdef TRISTEON_EDITOR
+#include <Editor/Dynamic/Objects/Actors/AnimationSpriteEditor.h>
+
+namespace DemoEditor
+{
+	class PlayerEditor : public TristeonEditor::AnimationSpriteEditor
+	{
+		OBJECT_EDITOR_H(Tristeon::Player, PlayerEditor);
+	};
+}
+#endif
