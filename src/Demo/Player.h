@@ -3,7 +3,7 @@
 #include <Registers/ActorRegister.h>
 
 #include "Actors/AnimationSprite.h"
-#include "Actors/Behaviours/MovementBehaviour.h"
+#include "MovementBehaviour.h"
 #include "Physics/BoxCollider.h"
 #include "Physics/PhysicsBody.h"
 

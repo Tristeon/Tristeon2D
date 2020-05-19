@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "Behaviour.h"
+#include <Actors/Behaviours/Behaviour.h>
 #include <Serialization/TypeRegister.h>
 #include <Registers/BehaviourRegister.h>
 
