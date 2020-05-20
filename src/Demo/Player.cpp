@@ -9,7 +9,7 @@ namespace Tristeon
 	{
 		physicsBody = getBehaviour<PhysicsBody>();
 		movementBehaviour = getBehaviour<MovementBehaviour>();
-		boxCollider = getBehaviour<BoxCollider>();
+		circleCollider = getBehaviour<CircleCollider>();
 	}
 
 	json Player::serialize()

@@ -188,13 +188,4 @@ vec2 getTileUV(vec2 uv, int tileX, int tileY)
     float v = y + (startY / (float)texSize.y);
     
     return vec2(u, v);
-
-    //Previous approach simply scaled the UVs by the cols/rows
-    // float x = uv.x / tileSet.cols;
-    // float y = uv.y / tileSet.rows;
-
-    // float u = (tileX * 1.0 / tileSet.cols) + x;
-    // float v = (tileY * 1.0 / tileSet.rows) + y;
-
-    // return vec2(u, v);
 }

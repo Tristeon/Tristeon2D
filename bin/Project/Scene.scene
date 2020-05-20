@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": 5356,
-            "y": 455
+            "x": 115,
+            "y": 274
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -11,7 +11,7 @@
             "y": 1080
         },
         "typeID": "Tristeon::Camera",
-        "zoom": 1.542124629020691
+        "zoom": 1.6003633737564087
     },
     "hud": {
         "typeID": "Tristeon::HUD"
@@ -4425,25 +4425,24 @@
                             "typeID": "Tristeon::PhysicsBody"
                         },
                         {
+                            "groundCheckDistance": 40.0,
+                            "jumpSpeed": 1400.0,
+                            "movementSpeed": 64.0,
+                            "typeID": "Tristeon::MovementBehaviour"
+                        },
+                        {
                             "density": 1.0,
-                            "friction": 0.0,
-                            "height": 64.0,
+                            "friction": 1.0,
                             "offset": {
                                 "typeID": "Tristeon::Vector2",
                                 "x": 0.0,
                                 "y": 0.0
                             },
+                            "radius": 30.0,
                             "restitution": 0.0,
                             "rotationOffset": 0.0,
                             "sensor": false,
-                            "typeID": "Tristeon::BoxCollider",
-                            "width": 64.0
-                        },
-                        {
-                            "groundCheckDistance": 40.0,
-                            "jumpSpeed": 1400.0,
-                            "movementSpeed": 64.0,
-                            "typeID": "Tristeon::MovementBehaviour"
+                            "typeID": "Tristeon::CircleCollider"
                         }
                     ],
                     "clipPath": "Project/PlayerIdle.clip",
@@ -4458,8 +4457,8 @@
                     "name": "Player",
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 64.39761352539063,
-                        "y": 191.168212890625
+                        "x": 6.319997787475586,
+                        "y": 198.5358428955078
                     },
                     "rotation": 0.0,
                     "scale": {
@@ -4469,7 +4468,7 @@
                     },
                     "texturePath": "project/playerwalking.png",
                     "typeID": "Tristeon::Player",
-                    "width": 64
+                    "width": 38
                 },
                 {
                     "behaviours": [

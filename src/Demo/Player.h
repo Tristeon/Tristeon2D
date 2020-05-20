@@ -4,7 +4,7 @@
 
 #include "Actors/AnimationSprite.h"
 #include "MovementBehaviour.h"
-#include "Physics/BoxCollider.h"
+#include "Physics/CircleCollider.h"
 #include "Physics/PhysicsBody.h"
 
 namespace Tristeon
@@ -22,7 +22,7 @@ namespace Tristeon
 		
 		PhysicsBody* physicsBody = nullptr;
 		MovementBehaviour* movementBehaviour = nullptr;
-		BoxCollider* boxCollider = nullptr;
+		CircleCollider* circleCollider = nullptr;
 	};
 }
 

@@ -65,7 +65,9 @@ namespace TristeonEditor
 		else if (Mouse::held(Mouse::Left) && editor()->selectedActor() != nullptr)
 		{
 			if (dragging)
+			{
 				editor()->selectedActor()->position = GameView::screenToWorld(Mouse::position());
+			}
 			else if (draggingCorner)
 			{
 				auto* sprite = dynamic_cast<Sprite*>(editor()->selectedActor());
@@ -93,8 +95,6 @@ namespace TristeonEditor
 					
 					sprite->width = size.x;
 					sprite->height = size.y;
-
-					editor()->selectedActor(sprite);
 				}
 			}
 			else if (draggingRotate)
@@ -103,7 +103,6 @@ namespace TristeonEditor
 				Vector2 const mouse = (GameView::screenToWorld(Mouse::position()) - position).getNormalized();
 				
 				editor()->selectedActor()->rotation = mouse.getAngle();
-				editor()->selectedActor(editor()->selectedActor());
 			}
 		}
 		else if (Mouse::released(Mouse::Left))
@@ -111,6 +110,7 @@ namespace TristeonEditor
 			dragging = false;
 			draggingCorner = false;
 			draggingRotate = false;
+			editor()->selectedActor(editor()->selectedActor());
 		}
 		
 		auto* graphic = dynamic_cast<Graphic*>(editor()->selectedActor());
