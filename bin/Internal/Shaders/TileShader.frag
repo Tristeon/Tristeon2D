@@ -76,10 +76,6 @@ void main()
     float tileX = (coords.x / normalizedTileWidth);
     float tileY = (coords.y / normalizedTileHeight);
 
-    //Calculate tile u,v by taking the leftover decimals in tileX and tileY
-    float tileU = mod(tileX, 1);
-    float tileV = mod(tileY, 1);
-
     //Calculate data index based on tileX and tileY
     int dataX = (int)floor(tileX);
     int dataY = (int)floor(tileY);
@@ -98,6 +94,10 @@ void main()
     ivec2 tileIndex = tileTo2DIndex(dataValue);
     if (tileIndex.x == -1 || tileIndex.y == -1)
         discard; //Discard empty tiles
+
+    //Calculate tile u,v by taking the leftover decimals in tileX and tileY
+    float tileU = mod(tileX, 1);
+    float tileV = mod(tileY, 1);
 
     //Convert UVs to tileset space
     vec2 tileSetUV = getTileUV(vec2(tileU, tileV), tileIndex.x, tileIndex.y);
