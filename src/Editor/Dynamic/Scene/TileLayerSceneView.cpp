@@ -47,7 +47,9 @@ namespace TristeonEditor
 
 			updateTileSize();
 			updateTilePosition(lastMousePos);
+
 		}
+		drawTile(lastTileIndex);
 	}
 
 	void TileLayerSceneView::mouseMoveEvent(QMouseEvent* event)
@@ -93,8 +95,6 @@ namespace TristeonEditor
 		Vector2 const cameraPos = (Vector2)Camera::main()->position * scalar;
 
 		Vector2Int const tileIndex = tileLayer->indexByPosition(GameView::screenToWorld(mousePos));
-
-		drawTile(tileIndex);
 
 		Vector2 position = { width() / 2.0f, height() / 2.0f }; //Start at center of the screen coz tiles start there too
 		position -= Vector2{ tileLayer->tileRenderWidth() / 2.0f, tileLayer->renderHeight() / 2.0f } *scalar; //Adjust center 
