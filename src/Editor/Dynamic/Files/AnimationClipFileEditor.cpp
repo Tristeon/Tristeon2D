@@ -1,4 +1,6 @@
 #ifdef TRISTEON_EDITOR
+#include "Animations/AnimationClip.h"
+#include "Resources.h"
 #include "AnimationClipFileEditor.h"
 #include "Editor/EditorFields.h"
 
@@ -51,6 +53,14 @@ namespace TristeonEditor
 				data["texturePath"] = localPath.toStdString();
 				saveData();
 			});
+	}
+
+	void AnimationClipFileEditor::saveData()
+	{
+		JsonFileEditor::saveData();
+
+		if (Tristeon::Resources::loaded(item->path))
+			Tristeon::Resources::assetLoad<Tristeon::AnimationClip>(item->path)->deserialize(data);
 	}
 }
 #endif
