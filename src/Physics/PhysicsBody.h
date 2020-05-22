@@ -99,6 +99,10 @@ namespace Tristeon
 		 * Sets the velocity to the given value.
 		 */
 		void setVelocity(Vector2 const& value);
+		/**
+		 * Sets the velocity to the given value.
+		 */
+		void setVelocity(float const& x, float const& y);
 
 		/**
 		 * Gets the gravity scale. This is a multiplier, defaulted to 1.

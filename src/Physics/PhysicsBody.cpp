@@ -124,6 +124,11 @@ namespace Tristeon
 		body->SetLinearVelocity(meterValue.convert<b2Vec2>());
 	}
 
+	void PhysicsBody::setVelocity(float const& x, float const& y)
+	{
+		setVelocity({ x, y });
+	}
+
 	float PhysicsBody::gravityScale() const
 	{
 		return _gravityScale;
