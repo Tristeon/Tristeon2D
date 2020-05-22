@@ -49,7 +49,7 @@ namespace TristeonEditor
 			return;
 		}
 
-		if (Mouse::pressed(Mouse::Left))
+		if (Mouse::pressed(Mouse::Left) && GameView::instance()->widget()->underMouse())
 		{
 			if ((corner->isHidden() || !corner->underMouse()) && (rotate->isHidden() || !rotate->underMouse()))
 				clickActor();

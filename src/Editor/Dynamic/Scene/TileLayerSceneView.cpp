@@ -108,6 +108,9 @@ namespace TristeonEditor
 
 	void TileLayerSceneView::drawTile(Tristeon::Vector2Int tileIndex)
 	{
+		if (!underMouse())
+			return;
+		
 		if (Keyboard::held(Keyboard::Alt)) return;
 		
 		if ((Mouse::pressed(Mouse::Left) || Mouse::held(Mouse::Left)) && tileLayer->checkBoundsByIndex(tileIndex))
