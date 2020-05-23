@@ -17,10 +17,10 @@ namespace TristeonEditor
 	{
 		ActorEditor::displayProperties();
 
-		auto* formWidget = new QWidget(this);
+		auto* formWidget = new QWidget(scrollArea);
 		auto* form = new QFormLayout(formWidget);
 		formWidget->setLayout(form);
-		layout->addWidget(formWidget);
+		scrollLayout->addWidget(formWidget);
 
 		auto* width = new QSpinBox(formWidget);
 		width->setMinimum(0);
@@ -70,10 +70,17 @@ namespace TristeonEditor
 		textureButton();
 	}
 
+	bool SpriteEditor::shouldDisplay(Tristeon::String const& propertyName)
+	{
+		if (propertyName == "width" || propertyName == "height" || propertyName == "colour" || propertyName == "texturePath")
+			return false;
+		return ActorEditor::shouldDisplay(propertyName);
+	}
+
 	void SpriteEditor::textureButton()
 	{
 		QPushButton* changeTexture = new QPushButton("Change Texture", this);
-		layout->addWidget(changeTexture);
+		scrollLayout->addWidget(changeTexture);
 		connect(changeTexture, &QPushButton::clicked, this, &SpriteEditor::changeTexturePressed);
 	}
 

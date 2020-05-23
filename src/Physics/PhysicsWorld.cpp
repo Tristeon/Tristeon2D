@@ -47,11 +47,14 @@ namespace Tristeon
 
 	bool PhysicsWorld::raycast(Vector2 const& origin, Vector2 const& direction, float const& distance)
 	{
+		if (distance == 0)
+			return false;
+		
 		auto* world = instance()->world.get();
 
 		RaycastResult callback;
 		b2Vec2 const point1 = pixelsToMeters(origin).convert<b2Vec2>();
-		b2Vec2 const point2 = pixelsToMeters(origin + direction * distance).convert<b2Vec2>();
+		b2Vec2 const point2 = pixelsToMeters(origin + direction.getNormalized() * distance).convert<b2Vec2>();
 		world->RayCast(&callback, point1, point2);
 
 		return callback.collider != nullptr;
@@ -60,6 +63,9 @@ namespace Tristeon
 	bool PhysicsWorld::raycast(Vector2 const& origin, Vector2 const& direction, float const& distance,
 		RaycastResult& result)
 	{
+		if (distance == 0)
+			return false;
+		
 		auto* world = instance()->world.get();
 
 		b2Vec2 const point1 = pixelsToMeters(origin).convert<b2Vec2>();
