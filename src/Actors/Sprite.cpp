@@ -36,14 +36,17 @@ namespace Tristeon
 	{
 		Actor::deserialize(j);
 		
-		width = j["width"];
-		height = j["height"];
+		width = j.value("width", 1);
+		height = j.value("height", 1);
 
-		colour = j["colour"];
+		colour = j.value("colour", Colour());
 
-		std::string texturePath = j["texturePath"];
+		std::string texturePath = j.value("texturePath", "");
 		if (texturePath != texture->getPath()) //Update if new path
 			texture = Resources::assetLoad<Texture>(texturePath);
+		
+		if (!texture)
+			texture = Resources::assetLoad<Texture>("Internal/Textures/white.jpg");
 	}
 
 	void Sprite::setTexture(std::string const& path, bool const& setSize)
