@@ -27,6 +27,8 @@ namespace Tristeon
 		j["typeID"] = TRISTEON_TYPENAME(Sprite);
 		j["width"] = width;
 		j["height"] = height;
+		j["flipX"] = flipX;
+		j["flipY"] = flipY;
 		j["colour"] = colour;
 		j["texturePath"] = texture->getPath();
 		return j;
@@ -38,6 +40,9 @@ namespace Tristeon
 		
 		width = j.value("width", 1);
 		height = j.value("height", 1);
+
+		flipX = j.value("flipX", false);
+		flipY = j.value("flipY", false);
 
 		colour = j.value("colour", Colour());
 
@@ -53,6 +58,9 @@ namespace Tristeon
 	{
 		texture = Resources::assetLoad<Texture>(path);
 
+		if (!texture)
+			texture = Resources::assetLoad<Texture>("Internal/Textures/white.jpg");
+		
 		if (setSize)
 		{
 			width = texture->width();
@@ -75,6 +83,9 @@ namespace Tristeon
 		program->setUniformValue("sprite.width", width);
 		program->setUniformValue("sprite.height", height);
 		program->setUniformValue("sprite.colour", colour.r, colour.g, colour.b, colour.a);
+
+		program->setUniformValue("sprite.flipX", flipX);
+		program->setUniformValue("sprite.flipY", flipY);
 		
 		program->setUniformValue("actor.position", position.x, position.y);
 		program->setUniformValue("actor.scale", scale.x, scale.y);

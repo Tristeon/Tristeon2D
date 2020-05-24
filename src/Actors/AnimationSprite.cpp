@@ -28,6 +28,9 @@ namespace Tristeon
 
 	void AnimationSprite::setAnimationClip(String const& clipPath)
 	{
+		if (clip != nullptr && clipPath == clip->filePath)
+			return;
+		
 		this->clip = Resources::jsonLoad<AnimationClip>(clipPath);
 		if (clip != nullptr)
 		{

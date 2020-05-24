@@ -34,7 +34,7 @@ namespace TristeonEditor
 		EditorFields::uintField(form, "Start Index", data["startIndex"], [&](uint value) { data["startIndex"] = value; saveData(); });
 		EditorFields::uintField(form, "End Index", data["endIndex"], [&](uint value) { data["endIndex"] = value; saveData(); });
 
-		EditorFields::boolField(form, "Loops", data["loops"], [&](int value) { data["loops"] = bool((Qt::CheckState)value == Qt::Checked); saveData(); });
+		EditorFields::boolField(form, "Loops", data["loops"], [&](int value) { data["loops"] = bool((Qt::CheckState)value != Qt::Unchecked); saveData(); });
 
 		EditorFields::floatField(form, "Playback Rate", data["playbackRate"], [&](float value) { data["playbackRate"] = value; saveData(); });
 
