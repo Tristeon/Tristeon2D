@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": 161,
-            "y": 284
+            "x": 3511,
+            "y": 119
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -11,7 +11,7 @@
             "y": 1080
         },
         "typeID": "Tristeon::Camera",
-        "zoom": 1.5328669548034668
+        "zoom": 1.515177845954895
     },
     "hud": {
         "typeID": "Tristeon::HUD"
@@ -4634,7 +4634,7 @@
                     "health": 100,
                     "height": 64,
                     "name": "Cockroach",
-                    "patrolSpeed": 80.0,
+                    "patrolSpeed": 120.0,
                     "position": {
                         "typeID": "Tristeon::Vector2",
                         "x": 1307.0045166015625,
@@ -4650,6 +4650,126 @@
                     "typeID": "Demo::GroundEnemy",
                     "wallCheckDistance": 80.0,
                     "width": 128
+                },
+                {
+                    "attack": 25,
+                    "behaviours": [
+                        {
+                            "angularDamping": 0.009999999776482582,
+                            "continuous": false,
+                            "enabled": true,
+                            "fixedRotation": true,
+                            "gravityScale": 1.0,
+                            "linearDamping": 0.0,
+                            "type": 2,
+                            "typeID": "Tristeon::PhysicsBody"
+                        },
+                        {
+                            "density": 1.0,
+                            "friction": 0.0,
+                            "offset": {
+                                "typeID": "Tristeon::Vector2",
+                                "x": 0.0,
+                                "y": 0.0
+                            },
+                            "radius": 30.0,
+                            "restitution": 0.0,
+                            "rotationOffset": 0.0,
+                            "sensor": false,
+                            "typeID": "Tristeon::CircleCollider"
+                        }
+                    ],
+                    "clipPath": "Project/CockroachWalk.clip",
+                    "colour": {
+                        "a": 1.0,
+                        "b": 1.0,
+                        "g": 1.0,
+                        "r": 1.0,
+                        "typeID": "Tristeon::Colour"
+                    },
+                    "flipX": false,
+                    "flipY": false,
+                    "floorCheckDistance": 50.0,
+                    "floorCheckOffset": 80.0,
+                    "health": 100,
+                    "height": 64,
+                    "name": "Cockroach 2",
+                    "patrolSpeed": 120.0,
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 2684.7451171875,
+                        "y": 194.30067443847656
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "texturePath": "project/enemy1.png",
+                    "typeID": "Demo::GroundEnemy",
+                    "wallCheckDistance": 80.0,
+                    "width": 128
+                },
+                {
+                    "attack": 25,
+                    "behaviours": [
+                        {
+                            "angularDamping": 0.009999999776482582,
+                            "continuous": false,
+                            "enabled": true,
+                            "fixedRotation": false,
+                            "gravityScale": 1.0,
+                            "linearDamping": 0.0,
+                            "type": 2,
+                            "typeID": "Tristeon::PhysicsBody"
+                        },
+                        {
+                            "density": 1.0,
+                            "friction": 0.0,
+                            "offset": {
+                                "typeID": "Tristeon::Vector2",
+                                "x": 0.0,
+                                "y": 0.0
+                            },
+                            "radius": 64.0,
+                            "restitution": 0.0,
+                            "rotationOffset": 0.0,
+                            "sensor": false,
+                            "typeID": "Tristeon::CircleCollider"
+                        }
+                    ],
+                    "clipPath": "Project/MouseWalk.clip",
+                    "colour": {
+                        "a": 1.0,
+                        "b": 1.0,
+                        "g": 1.0,
+                        "r": 1.0,
+                        "typeID": "Tristeon::Colour"
+                    },
+                    "flipX": false,
+                    "flipY": false,
+                    "floorCheckDistance": 100.0,
+                    "floorCheckOffset": 160.0,
+                    "health": 100,
+                    "height": 128,
+                    "name": "Mouse",
+                    "patrolSpeed": 120.0,
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 3645.152587890625,
+                        "y": 222.86851501464844
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "texturePath": "project/enemy2.png",
+                    "typeID": "Demo::GroundEnemy",
+                    "wallCheckDistance": 160.0,
+                    "width": 256
                 }
             ],
             "name": "Objects",
