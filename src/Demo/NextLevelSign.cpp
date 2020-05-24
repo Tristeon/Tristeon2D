@@ -1,6 +1,6 @@
 #include "NextLevelSign.h"
 #include "Physics/Collider.h"
-#include "Player.h"
+#include "Player/Player.h"
 #include "Scenes/SceneManager.h"
 
 namespace Demo

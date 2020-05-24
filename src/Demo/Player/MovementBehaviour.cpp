@@ -21,7 +21,7 @@ namespace Tristeon
 			velocity.y = jumpSpeed;
 		
 		float const horizontal = Keyboard::held(Keyboard::D) - Keyboard::held(Keyboard::A);
-		velocity.x = horizontal * GameView::deltaTime() * movementSpeed;
+		velocity.x = horizontal * movementSpeed;
 
 		getOwner<Player>()->physicsBody->setVelocity(velocity);
 	}

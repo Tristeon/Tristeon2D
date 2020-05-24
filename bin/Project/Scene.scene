@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": 115,
-            "y": 274
+            "x": 119,
+            "y": 277
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -11,7 +11,7 @@
             "y": 1080
         },
         "typeID": "Tristeon::Camera",
-        "zoom": 1.6003633737564087
+        "zoom": 1.7000000476837158
     },
     "hud": {
         "typeID": "Tristeon::HUD"
@@ -28,6 +28,8 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "flipX": false,
+                    "flipY": false,
                     "height": 1386,
                     "name": "Image",
                     "position": {
@@ -54,6 +56,8 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "flipX": false,
+                    "flipY": false,
                     "height": 1757,
                     "name": "Image 2",
                     "position": {
@@ -1183,11 +1187,11 @@
                     "tileSetID": -1
                 },
                 {
-                    "index": -1,
-                    "tileSetID": -1
+                    "index": 48,
+                    "tileSetID": 26857
                 },
                 {
-                    "index": 86,
+                    "index": 49,
                     "tileSetID": 26857
                 },
                 {
@@ -1543,11 +1547,11 @@
                     "tileSetID": -1
                 },
                 {
-                    "index": -1,
-                    "tileSetID": -1
+                    "index": 38,
+                    "tileSetID": 26857
                 },
                 {
-                    "index": 66,
+                    "index": 39,
                     "tileSetID": 26857
                 },
                 {
@@ -4419,15 +4423,15 @@
                             "continuous": true,
                             "enabled": true,
                             "fixedRotation": true,
-                            "gravityScale": 5.0,
+                            "gravityScale": 4.0,
                             "linearDamping": 0.0,
                             "type": 2,
                             "typeID": "Tristeon::PhysicsBody"
                         },
                         {
                             "groundCheckDistance": 40.0,
-                            "jumpSpeed": 1400.0,
-                            "movementSpeed": 64.0,
+                            "jumpSpeed": 1000.0,
+                            "movementSpeed": 500.0,
                             "typeID": "Tristeon::MovementBehaviour"
                         },
                         {
@@ -4443,6 +4447,12 @@
                             "rotationOffset": 0.0,
                             "sensor": false,
                             "typeID": "Tristeon::CircleCollider"
+                        },
+                        {
+                            "typeID": "Demo::CameraController"
+                        },
+                        {
+                            "typeID": "Demo::PlayerAnimations"
                         }
                     ],
                     "clipPath": "Project/PlayerIdle.clip",
@@ -4453,6 +4463,8 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "flipX": false,
+                    "flipY": false,
                     "height": 64,
                     "name": "Player",
                     "position": {
@@ -4516,6 +4528,8 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "flipX": false,
+                    "flipY": false,
                     "height": 63,
                     "name": "Next Level",
                     "position": {
@@ -4532,6 +4546,50 @@
                     "texturePath": "project/nextlevelsign.png",
                     "typeID": "Tristeon::Sprite",
                     "width": 86
+                },
+                {
+                    "behaviours": [
+                        {
+                            "density": 1.0,
+                            "friction": 0.0,
+                            "height": 50.0,
+                            "offset": {
+                                "typeID": "Tristeon::Vector2",
+                                "x": 0.0,
+                                "y": 0.0
+                            },
+                            "restitution": 0.0,
+                            "rotationOffset": 0.0,
+                            "sensor": false,
+                            "typeID": "Tristeon::BoxCollider",
+                            "width": 8000.0
+                        }
+                    ],
+                    "colour": {
+                        "a": 1.0,
+                        "b": 1.0,
+                        "g": 1.0,
+                        "r": 1.0,
+                        "typeID": "Tristeon::Colour"
+                    },
+                    "flipX": false,
+                    "flipY": false,
+                    "height": 50,
+                    "name": "DeathPit",
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 3840.33544921875,
+                        "y": -103.65792846679688
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "texturePath": "internal/textures/white.jpg",
+                    "typeID": "Demo::DeathPit",
+                    "width": 8000
                 }
             ],
             "name": "Objects",
