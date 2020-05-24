@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": 119,
-            "y": 277
+            "x": 161,
+            "y": 284
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -11,7 +11,7 @@
             "y": 1080
         },
         "typeID": "Tristeon::Camera",
-        "zoom": 1.7000000476837158
+        "zoom": 1.5328669548034668
     },
     "hud": {
         "typeID": "Tristeon::HUD"
@@ -4430,8 +4430,8 @@
                         },
                         {
                             "groundCheckDistance": 40.0,
-                            "jumpSpeed": 1000.0,
-                            "movementSpeed": 500.0,
+                            "jumpSpeed": 900.0,
+                            "movementSpeed": 325.0,
                             "typeID": "Tristeon::MovementBehaviour"
                         },
                         {
@@ -4469,8 +4469,8 @@
                     "name": "Player",
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 6.319997787475586,
-                        "y": 198.5358428955078
+                        "x": 66.73910522460938,
+                        "y": 195.36578369140625
                     },
                     "rotation": 0.0,
                     "scale": {
@@ -4590,6 +4590,66 @@
                     "texturePath": "internal/textures/white.jpg",
                     "typeID": "Demo::DeathPit",
                     "width": 8000
+                },
+                {
+                    "attack": 25,
+                    "behaviours": [
+                        {
+                            "angularDamping": 0.009999999776482582,
+                            "continuous": false,
+                            "enabled": true,
+                            "fixedRotation": false,
+                            "gravityScale": 1.0,
+                            "linearDamping": 0.0,
+                            "type": 2,
+                            "typeID": "Tristeon::PhysicsBody"
+                        },
+                        {
+                            "density": 1.0,
+                            "friction": 0.0,
+                            "offset": {
+                                "typeID": "Tristeon::Vector2",
+                                "x": 0.0,
+                                "y": 0.0
+                            },
+                            "radius": 32.0,
+                            "restitution": 0.0,
+                            "rotationOffset": 0.0,
+                            "sensor": false,
+                            "typeID": "Tristeon::CircleCollider"
+                        }
+                    ],
+                    "clipPath": "Project/CockroachWalk.clip",
+                    "colour": {
+                        "a": 1.0,
+                        "b": 1.0,
+                        "g": 1.0,
+                        "r": 1.0,
+                        "typeID": "Tristeon::Colour"
+                    },
+                    "flipX": false,
+                    "flipY": false,
+                    "floorCheckDistance": 50.0,
+                    "floorCheckOffset": 80.0,
+                    "health": 100,
+                    "height": 64,
+                    "name": "Cockroach",
+                    "patrolSpeed": 80.0,
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1307.0045166015625,
+                        "y": 192.72174072265625
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "texturePath": "project/enemy1.png",
+                    "typeID": "Demo::GroundEnemy",
+                    "wallCheckDistance": 80.0,
+                    "width": 128
                 }
             ],
             "name": "Objects",

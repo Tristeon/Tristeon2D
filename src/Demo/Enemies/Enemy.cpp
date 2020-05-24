@@ -43,5 +43,7 @@ namespace Demo
 			patrol();
 		else
 			chase(chasing);
+
+		flipX = pb->velocity().x > 0;
 	}
 }

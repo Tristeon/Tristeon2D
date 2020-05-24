@@ -36,10 +36,12 @@ namespace Demo
 
 	void GroundEnemy::patrol()
 	{
-		if (Tristeon::PhysicsWorld::raycast(position, { (float)patrolDirection, 0 }, wallCheckDistance))
+		bool wallInFront = Tristeon::PhysicsWorld::raycast(position, { (float)patrolDirection, 0 }, wallCheckDistance);
+		bool gapInFront = !Tristeon::PhysicsWorld::raycast(position + Tristeon::Vector2(floorCheckOffset* (float)patrolDirection, 0), Tristeon::Vector2::down(), floorCheckDistance);
+		if (wallInFront || gapInFront)
 			patrolDirection *= -1;
 		
-		pb->setVelocity(patrolDirection * patrolSpeed * Tristeon::GameView::deltaTime(), pb->velocity().y);
+		pb->setVelocity(patrolDirection * patrolSpeed, pb->velocity().y);
 	}
 
 	void GroundEnemy::die()
