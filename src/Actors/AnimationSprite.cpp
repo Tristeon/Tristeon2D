@@ -26,6 +26,11 @@ namespace Tristeon
 		setAnimationClip(j["clipPath"]);
 	}
 
+	void AnimationSprite::setPaused(bool const& value)
+	{
+		paused = value;
+	}
+
 	void AnimationSprite::setAnimationClip(String const& clipPath)
 	{
 		if (clip != nullptr && clipPath == clip->filePath)
@@ -62,6 +67,9 @@ namespace Tristeon
 	void AnimationSprite::update()
 	{
 		if (clip == nullptr)
+			return;
+
+		if (paused)
 			return;
 
 		if (clip->startIndex + floor(currentFrame) >= clip->endIndex)

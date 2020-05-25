@@ -20,6 +20,8 @@ namespace Tristeon
 		json serialize() override;
 		void deserialize(json j) override;
 
+		void setPaused(bool const& value);
+		
 		/**
 		 * Sets the current AnimationClip. Resets the frame counter to 0.
 		 */
@@ -31,5 +33,7 @@ namespace Tristeon
 
 		float currentFrame = 0;
 		AnimationClip* clip = nullptr;
+
+		bool paused = false;
 	};
 }

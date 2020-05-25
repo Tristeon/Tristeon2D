@@ -16,7 +16,6 @@ namespace TristeonEditor
 		setLayout(layout);
 
 		cameraController = std::make_unique<EditorCameraController>();
-		cameraController->editor = editor;
 	}
 
 	void GameViewEditor::paintGL()
@@ -55,7 +54,6 @@ namespace TristeonEditor
 		layerView = SceneEditorRegister::createInstance(layer->serialize()["typeID"]);
 		if (layerView != nullptr)
 		{
-			layerView->editor(editor);
 			layerView->target(layer);
 			layerView->setParent(this);
 			layerView->resize(width(), height());

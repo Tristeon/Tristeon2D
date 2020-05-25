@@ -89,6 +89,8 @@ namespace Tristeon
 			Mouse::reset();
 			Keyboard::reset();
 			Gamepad::reset();
+
+			SceneManager::processCachedLoad();
 		}
 	}
 

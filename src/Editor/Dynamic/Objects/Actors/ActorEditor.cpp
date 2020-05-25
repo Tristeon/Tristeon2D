@@ -272,7 +272,7 @@ namespace TristeonEditor
 	void ActorEditor::actorNameChanged(const QString& name)
 	{
 		actor->name = name.toStdString();
-		editor()->onSelectedActorNameChanged.invoke(name.toStdString());
+		Editor::instance()->onSelectedActorNameChanged.invoke(name.toStdString());
 	}
 
 	void ActorEditor::addButtonPressed()
@@ -311,7 +311,6 @@ namespace TristeonEditor
 		if (widget == nullptr)
 			widget = new BehaviourEditor(); //Default editor for behaviours as fallback.
 
-		widget->editor(editor());
 		widget->setParent(frame);
 		widget->target(behaviour);
 		widget->initialize();

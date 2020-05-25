@@ -14,7 +14,6 @@ namespace TristeonEditor
 		void handleScrolling();
 		
 		bool dragging = false;
-		Editor* editor = nullptr;
 		Tristeon::Vector2Int dragMousePos;
 	};
 }
