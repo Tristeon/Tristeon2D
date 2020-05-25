@@ -24,6 +24,8 @@ namespace Demo
 	{
 		Tristeon::Vector2 const velocity = getOwner<Tristeon::Player>()->physicsBody->velocity();
 		bool const walking = abs(velocity.x) > 0;
+		if (walking)
+			getOwner<Tristeon::Player>()->flipX = velocity.x < 0;
 		
 		auto* player = getOwner<Tristeon::Player>();
 		
@@ -46,7 +48,5 @@ namespace Demo
 			getOwner<Tristeon::Player>()->setAnimationClip("Project/PlayerWalk.clip");
 		else
 			getOwner<Tristeon::Player>()->setAnimationClip("Project/PlayerIdle.clip");
-
-		getOwner<Tristeon::Player>()->flipX = velocity.x < 0;
 	}
 }
