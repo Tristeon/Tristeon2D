@@ -23,7 +23,7 @@ namespace Demo
 
 	void NextLevelSign::sensorBegin(Tristeon::Collider* other)
 	{
-		if (dynamic_cast<Tristeon::Player*>(other->getOwner()) != nullptr)
+		if (other->getOwner<Tristeon::Player>())
 		{
 			Tristeon::SceneManager::load(nextScene);
 		}

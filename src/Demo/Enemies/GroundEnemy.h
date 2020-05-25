@@ -19,7 +19,7 @@ namespace Demo
 		void deserialize(json j) override;
 
 	protected:
-		void chase(Tristeon::Player* player) override;
+		void aggro(Tristeon::Player* player) override;
 		void patrol() override;
 		void die() override;
 

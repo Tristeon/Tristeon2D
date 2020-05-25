@@ -3,9 +3,12 @@
 #include <Registers/ActorRegister.h>
 
 #include "Actors/AnimationSprite.h"
+#include "Glider.h"
 #include "MovementBehaviour.h"
 #include "Physics/CircleCollider.h"
 #include "Physics/PhysicsBody.h"
+#include "PlayerHealth.h"
+#include "Weapon.h"
 
 namespace Tristeon
 {
@@ -18,11 +21,23 @@ namespace Tristeon
 		virtual ~Player() = default;
 
 		void start() override;
+		void update() override;
 		json serialize() override;
+		void deserialize(json j) override;
+
+		void respawn();
+		void freeze();
+		void unfreeze();
 		
 		PhysicsBody* physicsBody = nullptr;
 		MovementBehaviour* movementBehaviour = nullptr;
+		Demo::Glider* glider = nullptr;
+		Demo::Weapon* weapon = nullptr;
+		Demo::PlayerHealth* playerHealth = nullptr;
 		CircleCollider* circleCollider = nullptr;
+
+	private:
+		Vector2 spawnPoint;
 	};
 }
 

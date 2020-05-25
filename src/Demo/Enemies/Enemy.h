@@ -19,7 +19,7 @@ namespace Demo
 		virtual void damage(int const& amount, Tristeon::Player* source);
 		void update() override;
 	protected:
-		virtual void chase(Tristeon::Player* player) = 0;
+		virtual void aggro(Tristeon::Player* player) = 0;
 		virtual void patrol() = 0;
 		virtual void die() = 0;
 

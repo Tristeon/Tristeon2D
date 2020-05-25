@@ -1,0 +1,18 @@
+{
+    "cols": 2,
+    "endIndex": 0,
+    "loops": false,
+    "playbackRate": 1.0,
+    "rows": 3,
+    "spacing": {
+        "bottom": 0,
+        "horizontalFrame": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "verticalFrame": 0
+    },
+    "startIndex": 0,
+    "texturePath": "",
+    "typeID": "Tristeon::AnimationClip"
+}

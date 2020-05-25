@@ -36,13 +36,19 @@ namespace Demo
 	{
 		AnimationSprite::update();
 
+		if (position.y < -64)
+		{
+			destroy();
+			return;
+		}
+		
 		if (dead)
 			return;
 
 		if (chasing == nullptr)
 			patrol();
 		else
-			chase(chasing);
+			aggro(chasing);
 
 		flipX = pb->velocity().x > 0;
 	}

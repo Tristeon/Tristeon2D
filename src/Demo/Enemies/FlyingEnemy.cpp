@@ -1,6 +1,4 @@
 #include "FlyingEnemy.h"
-
-
 #include "Demo/Player/Player.h"
 #include "Physics/PhysicsBody.h"
 
@@ -35,9 +33,13 @@ namespace Demo
 		goalDetectDistance = j.value("goalDetectDistance", 0);
 	}
 
-	void FlyingEnemy::chase(Tristeon::Player* player)
+	void FlyingEnemy::aggro(Tristeon::Player* player)
 	{
-		pb->setVelocity((player->position - position).getNormalized() * chaseSpeed);
+		Tristeon::Vector2 const goal = startPos + direction * Tristeon::Vector2::up() * patrolDistance;
+		pb->setVelocity((Tristeon::Vector2::up() * direction).getNormalized() * patrolSpeed);
+
+		if (Tristeon::Vector2::distance(position, goal) < goalDetectDistance)
+			direction *= -1;
 	}
 
 	void FlyingEnemy::patrol()
@@ -51,7 +53,7 @@ namespace Demo
 
 	void FlyingEnemy::die()
 	{
-		
+		destroy();
 	}
 }
 

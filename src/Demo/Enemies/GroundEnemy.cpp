@@ -34,7 +34,7 @@ namespace Demo
 		floorCheckOffset = j["floorCheckOffset"];
 	}
 
-	void GroundEnemy::chase(Tristeon::Player* player)
+	void GroundEnemy::aggro(Tristeon::Player* player)
 	{
 		pb->setVelocity(Tristeon::Math::sign((player->position - position).x) * chaseSpeed, pb->velocity().y);
 	}
@@ -51,7 +51,7 @@ namespace Demo
 
 	void GroundEnemy::die()
 	{
-		
+		destroy();
 	}
 }
 

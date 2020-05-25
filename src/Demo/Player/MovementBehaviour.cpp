@@ -17,10 +17,10 @@ namespace Tristeon
 
 		Vector2 velocity = getOwner<Player>()->physicsBody->velocity();
 		
-		if (isGrounded && Keyboard::pressed(Keyboard::W))
+		if (isGrounded && Keyboard::pressed(Keyboard::Up))
 			velocity.y = jumpSpeed;
 		
-		float const horizontal = Keyboard::held(Keyboard::D) - Keyboard::held(Keyboard::A);
+		float const horizontal = Keyboard::held(Keyboard::Right) - Keyboard::held(Keyboard::Left);
 		velocity.x = horizontal * movementSpeed;
 
 		getOwner<Player>()->physicsBody->setVelocity(velocity);
