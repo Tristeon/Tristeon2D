@@ -25,6 +25,7 @@ namespace Demo
 
 		int patrolDirection = Left;
 		float patrolSpeed = 0;
+		float chaseSpeed = 0;
 		float wallCheckDistance = 0;
 		float floorCheckDistance = 0;
 		float floorCheckOffset = 0;

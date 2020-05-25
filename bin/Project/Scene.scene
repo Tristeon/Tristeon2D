@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": 3511,
-            "y": 119
+            "x": 1745,
+            "y": 367
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -11,7 +11,7 @@
             "y": 1080
         },
         "typeID": "Tristeon::Camera",
-        "zoom": 1.515177845954895
+        "zoom": 1.6067638397216797
     },
     "hud": {
         "typeID": "Tristeon::HUD"
@@ -34,8 +34,8 @@
                     "name": "Image",
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 1265.8651123046875,
-                        "y": 459.30303955078125
+                        "x": 957.8165283203125,
+                        "y": 484.3756103515625
                     },
                     "rotation": 0.0,
                     "scale": {
@@ -4469,8 +4469,8 @@
                     "name": "Player",
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 66.73910522460938,
-                        "y": 195.36578369140625
+                        "x": 1349.773681640625,
+                        "y": 387.39630126953125
                     },
                     "rotation": 0.0,
                     "scale": {
@@ -4619,6 +4619,7 @@
                             "typeID": "Tristeon::CircleCollider"
                         }
                     ],
+                    "chaseSpeed": 0.0,
                     "clipPath": "Project/CockroachWalk.clip",
                     "colour": {
                         "a": 1.0,
@@ -4679,6 +4680,7 @@
                             "typeID": "Tristeon::CircleCollider"
                         }
                     ],
+                    "chaseSpeed": 0.0,
                     "clipPath": "Project/CockroachWalk.clip",
                     "colour": {
                         "a": 1.0,
@@ -4739,6 +4741,7 @@
                             "typeID": "Tristeon::CircleCollider"
                         }
                     ],
+                    "chaseSpeed": 0.0,
                     "clipPath": "Project/MouseWalk.clip",
                     "colour": {
                         "a": 1.0,
@@ -4770,6 +4773,66 @@
                     "typeID": "Demo::GroundEnemy",
                     "wallCheckDistance": 160.0,
                     "width": 256
+                },
+                {
+                    "attack": 25,
+                    "behaviours": [
+                        {
+                            "angularDamping": 0.009999999776482582,
+                            "continuous": false,
+                            "enabled": true,
+                            "fixedRotation": false,
+                            "gravityScale": 0.0,
+                            "linearDamping": 0.0,
+                            "type": 2,
+                            "typeID": "Tristeon::PhysicsBody"
+                        },
+                        {
+                            "density": 1.0,
+                            "friction": 0.0,
+                            "offset": {
+                                "typeID": "Tristeon::Vector2",
+                                "x": 0.0,
+                                "y": 0.0
+                            },
+                            "radius": 32.0,
+                            "restitution": 0.0,
+                            "rotationOffset": 0.0,
+                            "sensor": false,
+                            "typeID": "Tristeon::CircleCollider"
+                        }
+                    ],
+                    "chaseSpeed": 0.0,
+                    "clipPath": "Project/MosquitoPatrol.clip",
+                    "colour": {
+                        "a": 1.0,
+                        "b": 1.0,
+                        "g": 1.0,
+                        "r": 1.0,
+                        "typeID": "Tristeon::Colour"
+                    },
+                    "flipX": false,
+                    "flipY": false,
+                    "goalDetectDistance": 10.0,
+                    "health": 100,
+                    "height": 64,
+                    "name": "Mosquito",
+                    "patrolDistance": 150.0,
+                    "patrolSpeed": 200.0,
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1758.5533447265625,
+                        "y": 335.4898376464844
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "texturePath": "project/mosquito.png",
+                    "typeID": "Demo::FlyingEnemy",
+                    "width": 64
                 }
             ],
             "name": "Objects",

@@ -1,4 +1,7 @@
 #include "GroundEnemy.h"
+
+#include "Demo/Player/Player.h"
+#include "Math/Math.h"
 #include "Physics/PhysicsBody.h"
 #include "Physics/PhysicsWorld.h"
 #include "Rendering/GameView.h"
@@ -13,6 +16,7 @@ namespace Demo
 		json j = Enemy::serialize();
 		j["typeID"] = TRISTEON_TYPENAME(GroundEnemy);
 		j["patrolSpeed"] = patrolSpeed;
+		j["chaseSpeed"] = chaseSpeed;
 		j["wallCheckDistance"] = wallCheckDistance;
 		j["floorCheckDistance"] = floorCheckDistance;
 		j["floorCheckOffset"] = floorCheckOffset;
@@ -24,6 +28,7 @@ namespace Demo
 		Enemy::deserialize(j);
 		
 		patrolSpeed = j["patrolSpeed"];
+		chaseSpeed = j.value("chaseSpeed", 0);
 		wallCheckDistance = j["wallCheckDistance"];
 		floorCheckDistance = j["floorCheckDistance"];
 		floorCheckOffset = j["floorCheckOffset"];
@@ -31,7 +36,7 @@ namespace Demo
 
 	void GroundEnemy::chase(Tristeon::Player* player)
 	{
-		
+		pb->setVelocity(Tristeon::Math::sign((player->position - position).x) * chaseSpeed, pb->velocity().y);
 	}
 
 	void GroundEnemy::patrol()
