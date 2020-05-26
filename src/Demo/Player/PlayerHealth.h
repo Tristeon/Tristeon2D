@@ -3,6 +3,8 @@
 #include <Serialization/TypeRegister.h>
 #include <Registers/BehaviourRegister.h>
 
+
+#include "Actors/AnimationSprite.h"
 #include "Callbacks/IStart.h"
 #include "Callbacks/IUpdate.h"
 #include "Physics/Callbacks/IContactBegin.h"
@@ -27,5 +29,7 @@ namespace Demo
 		unsigned int currentHealth = 0;
 
 		float fade = -1;
+
+		Tristeon::AnimationSprite* healthBar = nullptr;
 	};
 }

@@ -27,6 +27,10 @@ namespace Demo
 	void PlayerHealth::start()
 	{
 		currentHealth = maxHealth;
+
+		healthBar = dynamic_cast<Tristeon::AnimationSprite*>(Tristeon::Actor::find("HealthBar"));
+		healthBar->setPaused(true);
+		healthBar->setFrame(0);
 	}
 
 	void PlayerHealth::update()
@@ -68,10 +72,11 @@ namespace Demo
 	{
 		if (fade > 0)
 			return;
-		
+
 		currentHealth--;
 		fade = 1;
 
+		healthBar->setFrame(maxHealth - currentHealth);
 		getOwner<Tristeon::Player>()->freeze();
 	}
 }

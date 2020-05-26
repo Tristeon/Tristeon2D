@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": 215,
-            "y": 347
+            "x": -83,
+            "y": 234
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -11,7 +11,7 @@
             "y": 1080
         },
         "typeID": "Tristeon::Camera",
-        "zoom": 1.6760001182556152
+        "zoom": 1.6519999504089355
     },
     "hud": {
         "typeID": "Tristeon::HUD"
@@ -35,8 +35,8 @@
                     "name": "Image",
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 957.8165283203125,
-                        "y": 484.3756103515625
+                        "x": 1018.680419921875,
+                        "y": 448.0584716796875
                     },
                     "rotation": 0.0,
                     "scale": {
@@ -4488,8 +4488,8 @@
                     "name": "Player",
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 23.888763427734375,
-                        "y": 191.94729614257813
+                        "x": 30.236785888671875,
+                        "y": 191.37057495117188
                     },
                     "rotation": 0.0,
                     "scale": {
@@ -4630,10 +4630,10 @@
                     "patrolSpeed": 120.0,
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 1307.0045166015625,
-                        "y": 192.72174072265625
+                        "x": 1416.997802734375,
+                        "y": 192.6280059814453
                     },
-                    "rotation": 0.0,
+                    "rotation": -0.00010554989421507344,
                     "scale": {
                         "typeID": "Tristeon::Vector2",
                         "x": 1.0,
@@ -4682,7 +4682,7 @@
                         "typeID": "Tristeon::Colour"
                     },
                     "display": true,
-                    "flipX": false,
+                    "flipX": true,
                     "flipY": false,
                     "floorCheckDistance": 50.0,
                     "floorCheckOffset": 80.0,
@@ -4692,8 +4692,8 @@
                     "patrolSpeed": 120.0,
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 2684.7451171875,
-                        "y": 194.30067443847656
+                        "x": 2538.767578125,
+                        "y": 190.6350555419922
                     },
                     "rotation": 0.0,
                     "scale": {
@@ -4754,10 +4754,10 @@
                     "patrolSpeed": 120.0,
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 3645.152587890625,
-                        "y": 222.86851501464844
+                        "x": 3959.17578125,
+                        "y": 224.6385955810547
                     },
-                    "rotation": 0.0,
+                    "rotation": 0.0017847989220172167,
                     "scale": {
                         "typeID": "Tristeon::Vector2",
                         "x": 1.0,
@@ -4817,9 +4817,9 @@
                     "position": {
                         "typeID": "Tristeon::Vector2",
                         "x": 1758.5533447265625,
-                        "y": 335.4898376464844
+                        "y": 485.49029541015625
                     },
-                    "rotation": 0.0,
+                    "rotation": -0.0,
                     "scale": {
                         "typeID": "Tristeon::Vector2",
                         "x": 1.0,
@@ -4846,8 +4846,8 @@
                     "name": "ChargeBar",
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 23.31780242919922,
-                        "y": 247.20416259765625
+                        "x": 547.0439453125,
+                        "y": 510.5831604003906
                     },
                     "rotation": 0.0,
                     "scale": {
@@ -4858,6 +4858,40 @@
                     "texturePath": "project/chargingbar.png",
                     "typeID": "Tristeon::AnimationSprite",
                     "width": 100
+                },
+                {
+                    "behaviours": [
+                        {
+                            "typeID": "Demo::IgnoreCameraMovement"
+                        }
+                    ],
+                    "clipPath": "Project/HealthBar.clip",
+                    "colour": {
+                        "a": 1.0,
+                        "b": 1.0,
+                        "g": 1.0,
+                        "r": 1.0,
+                        "typeID": "Tristeon::Colour"
+                    },
+                    "display": true,
+                    "flipX": false,
+                    "flipY": false,
+                    "height": 63,
+                    "name": "HealthBar",
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": -455.5564270019531,
+                        "y": 266.9169616699219
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "texturePath": "project/heartspritesheet.png",
+                    "typeID": "Tristeon::AnimationSprite",
+                    "width": 215
                 }
             ],
             "name": "Objects",
