@@ -18,6 +18,7 @@ namespace Demo
 	{
 		json j;
 		j["typeID"] = TRISTEON_TYPENAME(Weapon);
+		j["ammo"] = ammo;
 		j["chargeDuration"] = chargeDuration;
 		j["minimumCharge"] = minimumCharge;
 		j["throwStrength"] = throwStrength;
@@ -28,6 +29,7 @@ namespace Demo
 
 	void Weapon::deserialize(json j)
 	{
+		ammo = j.value("ammo", 0);
 		chargeDuration = j.value("chargeDuration", 0);
 		minimumCharge = j.value("minimumCharge", 0.1f);
 		throwStrength = j.value("throwStrength", 0);
@@ -39,11 +41,20 @@ namespace Demo
 	{
 		chargeBar = dynamic_cast<Tristeon::AnimationSprite*>(Tristeon::Actor::find("ChargeBar"));
 		chargeBar->setPaused(true);
+
+		ammoOnes = dynamic_cast<Tristeon::AnimationSprite*>(Tristeon::Actor::find("AmmoCountOnes"));
+		ammoOnes->setPaused(true);
+		
+		ammoTens = dynamic_cast<Tristeon::AnimationSprite*>(Tristeon::Actor::find("AmmoCountTens"));
+		ammoTens->setPaused(true);
+
+		ammoTens->setFrame(ammo / 10);
+		ammoOnes->setFrame(ammo % 10);
 	}
 
 	void Weapon::update()
 	{
-		if (Tristeon::Keyboard::pressed(Tristeon::Keyboard::Space))
+		if (Tristeon::Keyboard::pressed(Tristeon::Keyboard::Space) && ammo > 0)
 			charging = true;
 		
 		if (Tristeon::Keyboard::released(Tristeon::Keyboard::Space))
@@ -82,5 +93,10 @@ namespace Demo
 		projectile->damage = damage * strength;
 		projectile->start();
 		projectile->shoot(direction, strength * throwStrength, throwStrengthY);
+
+		ammo--;
+
+		ammoTens->setFrame(ammo / 10);
+		ammoOnes->setFrame(ammo % 10);
 	}
 }

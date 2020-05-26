@@ -25,10 +25,13 @@ namespace Demo
 		bool isCharging() const { return charging; }
 	private:
 		Tristeon::AnimationSprite* chargeBar = nullptr;
+		Tristeon::AnimationSprite* ammoTens = nullptr;
+		Tristeon::AnimationSprite* ammoOnes = nullptr;
 		
 		bool charging = false;
 		float time = 0;
 
+		int ammo = 0;
 		float chargeDuration = 0;
 		float minimumCharge = 0.1f;
 		float throwStrength = 0;

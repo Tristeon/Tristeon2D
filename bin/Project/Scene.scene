@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": -34,
-            "y": 138
+            "x": -1,
+            "y": 6
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -4461,6 +4461,7 @@
                             "typeID": "Demo::Glider"
                         },
                         {
+                            "ammo": 20,
                             "chargeDuration": 1000.0,
                             "damage": 100.0,
                             "minimumCharge": 0.25,
@@ -4892,6 +4893,74 @@
                     "texturePath": "project/heartspritesheet.png",
                     "typeID": "Tristeon::AnimationSprite",
                     "width": 215
+                },
+                {
+                    "behaviours": [
+                        {
+                            "typeID": "Demo::IgnoreCameraMovement"
+                        }
+                    ],
+                    "clipPath": "Project/Score.clip",
+                    "colour": {
+                        "a": 1.0,
+                        "b": 1.0,
+                        "g": 1.0,
+                        "r": 1.0,
+                        "typeID": "Tristeon::Colour"
+                    },
+                    "display": true,
+                    "flipX": false,
+                    "flipY": false,
+                    "height": 64,
+                    "name": "AmmoCountOnes",
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": -480.3061218261719,
+                        "y": 187.3044891357422
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "texturePath": "project/score.png",
+                    "typeID": "Tristeon::AnimationSprite",
+                    "width": 64
+                },
+                {
+                    "behaviours": [
+                        {
+                            "typeID": "Demo::IgnoreCameraMovement"
+                        }
+                    ],
+                    "clipPath": "Project/Score.clip",
+                    "colour": {
+                        "a": 1.0,
+                        "b": 1.0,
+                        "g": 1.0,
+                        "r": 1.0,
+                        "typeID": "Tristeon::Colour"
+                    },
+                    "display": true,
+                    "flipX": false,
+                    "flipY": false,
+                    "height": 64,
+                    "name": "AmmoCountTens",
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": -535.81591796875,
+                        "y": 187.3044891357422
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "texturePath": "project/score.png",
+                    "typeID": "Tristeon::AnimationSprite",
+                    "width": 64
                 }
             ],
             "name": "Objects",
