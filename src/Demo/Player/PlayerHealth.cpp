@@ -28,7 +28,7 @@ namespace Demo
 	{
 		currentHealth = maxHealth;
 
-		healthBar = dynamic_cast<Tristeon::AnimationSprite*>(Tristeon::Actor::find("HealthBar"));
+		healthBar = Tristeon::Actor::findOfType<Tristeon::AnimationSprite>("HealthBar");
 		healthBar->setPaused(true);
 		healthBar->setFrame(0);
 	}

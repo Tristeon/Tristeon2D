@@ -95,15 +95,30 @@ namespace Tristeon
 		void destroy();
 
 		/**
-		 * Looks for the actor by name, in every actor layer.
+		 * Looks through every actor layer,
+		 * returns the first actor with the given name.
+		 *
+		 * Returns nullptr if no actor was found.
 		 */
 		static Actor* find(String const& name);
 
 		/**
-		 * Looks for the actor by type, in every actor layer.
+		 * Looks through every actor layer,
+		 * returns the first actor with the given type.
+		 *
+		 * Returns nullptr if no actor was found.
 		 */
 		template<typename T>
-		static Actor* find();
+		static T* findOfType();
+
+		/**
+		 * Looks through every actor layer,
+		 * returns the first actor with the given type AND name.
+		 *
+		 * Returns nullptr if no actor was found.
+		 */
+		template<typename T>
+		static T* findOfType(String name);
 	private:
 		Vector<Unique<Behaviour>> _behaviours;
 
@@ -157,12 +172,25 @@ namespace Tristeon
 	}
 
 	template <typename T>
-	Actor* Actor::find()
+	T* Actor::findOfType()
 	{
 		auto layers = SceneManager::current()->findLayersOfType<ActorLayer>();
 		for (auto layer : layers)
 		{
 			auto* actor = layer->findActorOfType<T>();
+			if (actor)
+				return actor;
+		}
+		return nullptr;
+	}
+
+	template <typename T>
+	T* Actor::findOfType(String name)
+	{
+		auto layers = SceneManager::current()->findLayersOfType<ActorLayer>();
+		for (auto layer : layers)
+		{
+			auto* actor = layer->findActorOfType<T>(name);
 			if (actor)
 				return actor;
 		}

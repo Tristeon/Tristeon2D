@@ -1,6 +1,5 @@
 #include "Weapon.h"
 
-#include "Input/Mouse.h"
 #include "Rendering/GameView.h"
 #include "Scenes/Scene.h"
 #include "Scenes/SceneManager.h"
@@ -39,13 +38,13 @@ namespace Demo
 
 	void Weapon::start()
 	{
-		chargeBar = dynamic_cast<Tristeon::AnimationSprite*>(Tristeon::Actor::find("ChargeBar"));
+		chargeBar = Tristeon::Actor::findOfType<Tristeon::AnimationSprite>("ChargeBar");
 		chargeBar->setPaused(true);
 
-		ammoOnes = dynamic_cast<Tristeon::AnimationSprite*>(Tristeon::Actor::find("AmmoCountOnes"));
+		ammoOnes = Tristeon::Actor::findOfType<Tristeon::AnimationSprite>("AmmoCountOnes");
 		ammoOnes->setPaused(true);
 		
-		ammoTens = dynamic_cast<Tristeon::AnimationSprite*>(Tristeon::Actor::find("AmmoCountTens"));
+		ammoTens = Tristeon::Actor::findOfType<Tristeon::AnimationSprite>("AmmoCountTens");
 		ammoTens->setPaused(true);
 
 		ammoTens->setFrame(ammo / 10);
