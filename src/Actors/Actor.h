@@ -8,6 +8,10 @@
 
 #include <Callbacks/IStart.h>
 
+#include "Scenes/Scene.h"
+#include "Scenes/SceneManager.h"
+#include <Scenes/Layers/ActorLayer.h>
+
 namespace Tristeon
 {
 	class ActorLayer;
@@ -90,6 +94,16 @@ namespace Tristeon
 		 */
 		void destroy();
 
+		/**
+		 * Looks for the actor by name, in every actor layer.
+		 */
+		static Actor* find(String const& name);
+
+		/**
+		 * Looks for the actor by type, in every actor layer.
+		 */
+		template<typename T>
+		static Actor* find();
 	private:
 		Vector<Unique<Behaviour>> _behaviours;
 
@@ -140,5 +154,18 @@ namespace Tristeon
 			istart->start();
 		
 		return result;
+	}
+
+	template <typename T>
+	Actor* Actor::find()
+	{
+		auto layers = SceneManager::current()->findLayersOfType<ActorLayer>();
+		for (auto layer : layers)
+		{
+			auto* actor = layer->findActorOfType<T>();
+			if (actor)
+				return actor;
+		}
+		return nullptr;
 	}
 }

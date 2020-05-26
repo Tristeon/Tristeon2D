@@ -4,6 +4,7 @@
 #include <Animations/AnimationClip.h>
 
 #include "AssetDatabase.h"
+#include "Math/Math.h"
 #include "Rendering/GameView.h"
 #include "Resources.h"
 
@@ -43,6 +44,11 @@ namespace Tristeon
 			setTexture(clip->texturePath, false);
 			currentFrame = 0;
 		}
+	}
+
+	void AnimationSprite::setFrame(unsigned int const& frame)
+	{
+		currentFrame = Math::clamp(frame, clip->startIndex, clip->endIndex);
 	}
 
 	void AnimationSprite::render(QOpenGLShaderProgram* program)

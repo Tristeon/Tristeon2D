@@ -1,13 +1,13 @@
 #pragma once
 #include "Layer.h"
 
-#include <Actors/Actor.h>
 #include <Serialization/TypeRegister.h>
 #include <Registers/LayerRegister.h>
 #include <vector>
 
 namespace Tristeon
 {
+	class Actor;
 	class Shader;
 	class SceneManager;
 

@@ -7,6 +7,7 @@
 #include <Actors/Collector.h>
 #include <Callbacks/IStart.h>
 #include <Scenes/Layers/ActorLayer.h>
+#include "Engine.h"
 
 namespace Tristeon
 {
@@ -82,7 +83,8 @@ namespace Tristeon
 		currentScene->name = cachedSceneName;
 		currentScene->path = path;
 
-		for (auto start : Collector<IStart>::all()) start->start();
+		if (Engine::playMode())
+			for (auto start : Collector<IStart>::all()) start->start();
 
 		sceneLoaded.invoke(currentScene.get());
 

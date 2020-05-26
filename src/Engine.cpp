@@ -64,6 +64,12 @@ namespace Tristeon
 
 			if (inPlayMode)
 			{
+				if (playModeDirty)
+				{
+					for (auto start : Collector<IStart>::all()) start->start();
+					playModeDirty = false;
+				}
+				
 				fixedUpdateTime += deltaTime;
 				while (fixedUpdateTime > fixedDeltaTime) 
 				{
@@ -97,6 +103,7 @@ namespace Tristeon
 	void Engine::playMode(bool const& enabled)
 	{
 		instance()->inPlayMode = enabled;
+		instance()->playModeDirty = true;
 	}
 
 	bool Engine::playMode()

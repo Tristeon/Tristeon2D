@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": 306,
-            "y": 322
+            "x": 215,
+            "y": 347
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -11,7 +11,7 @@
             "y": 1080
         },
         "typeID": "Tristeon::Camera",
-        "zoom": 1.6596437692642212
+        "zoom": 1.5439813137054443
     },
     "hud": {
         "typeID": "Tristeon::HUD"
@@ -28,6 +28,7 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "display": true,
                     "flipX": false,
                     "flipY": false,
                     "height": 1386,
@@ -56,6 +57,7 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "display": true,
                     "flipX": false,
                     "flipY": false,
                     "height": 1757,
@@ -4460,10 +4462,10 @@
                         },
                         {
                             "chargeDuration": 1000.0,
-                            "damage": 25.0,
+                            "damage": 100.0,
                             "minimumCharge": 0.25,
                             "throwStrength": 800.0,
-                            "throwStrengthY": 200.0,
+                            "throwStrengthY": 100.0,
                             "typeID": "Demo::Weapon"
                         },
                         {
@@ -4479,6 +4481,7 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "display": true,
                     "flipX": false,
                     "flipY": false,
                     "height": 64,
@@ -4559,6 +4562,7 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "display": true,
                     "flipX": false,
                     "flipY": false,
                     "height": 63,
@@ -4615,6 +4619,7 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "display": true,
                     "flipX": false,
                     "flipY": false,
                     "floorCheckDistance": 50.0,
@@ -4676,6 +4681,7 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "display": true,
                     "flipX": false,
                     "flipY": false,
                     "floorCheckDistance": 50.0,
@@ -4737,11 +4743,12 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "display": true,
                     "flipX": false,
                     "flipY": false,
                     "floorCheckDistance": 100.0,
                     "floorCheckOffset": 160.0,
-                    "health": 100,
+                    "health": 200,
                     "height": 128,
                     "name": "Mouse",
                     "patrolSpeed": 120.0,
@@ -4798,10 +4805,11 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "display": true,
                     "flipX": false,
                     "flipY": false,
                     "goalDetectDistance": 10.0,
-                    "health": 100,
+                    "health": 50,
                     "height": 64,
                     "name": "Mosquito",
                     "patrolDistance": 150.0,
@@ -4820,6 +4828,36 @@
                     "texturePath": "project/mosquito.png",
                     "typeID": "Demo::FlyingEnemy",
                     "width": 64
+                },
+                {
+                    "behaviours": [],
+                    "clipPath": "Project/ChargingBar.clip",
+                    "colour": {
+                        "a": 1.0,
+                        "b": 1.0,
+                        "g": 1.0,
+                        "r": 1.0,
+                        "typeID": "Tristeon::Colour"
+                    },
+                    "display": true,
+                    "flipX": false,
+                    "flipY": false,
+                    "height": 15,
+                    "name": "ChargeBar",
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 23.31780242919922,
+                        "y": 247.20416259765625
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "texturePath": "project/chargingbar.png",
+                    "typeID": "Tristeon::AnimationSprite",
+                    "width": 100
                 }
             ],
             "name": "Objects",

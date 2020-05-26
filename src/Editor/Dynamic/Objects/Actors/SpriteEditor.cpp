@@ -23,6 +23,7 @@ namespace TristeonEditor
 		formWidget->setLayout(form);
 		scrollLayout->addWidget(formWidget);
 
+		EditorFields::boolField(form, "Display", sprite->display, [=](int value) { sprite->display = value; });
 		EditorFields::uintField(form, "Width", sprite->width, [=](int value) { sprite->width = value; });
 		EditorFields::uintField(form, "Height", sprite->height, [=](int value) { sprite->height = value; });
 
@@ -61,7 +62,7 @@ namespace TristeonEditor
 
 	bool SpriteEditor::shouldDisplay(Tristeon::String const& propertyName)
 	{
-		if (propertyName == "width" || propertyName == "height" || propertyName == "colour" || propertyName == "texturePath" || propertyName == "flipX" || propertyName == "flipY")
+		if (propertyName == "display" || propertyName == "width" || propertyName == "height" || propertyName == "colour" || propertyName == "texturePath" || propertyName == "flipX" || propertyName == "flipY")
 			return false;
 		return ActorEditor::shouldDisplay(propertyName);
 	}

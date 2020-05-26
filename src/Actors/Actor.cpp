@@ -101,4 +101,16 @@ namespace Tristeon
 	{
 		Engine::instance()->destroyLater(this);
 	}
+
+	Actor* Actor::find(String const& name)
+	{
+		auto layers = SceneManager::current()->findLayersOfType<ActorLayer>();
+		for (auto layer : layers)
+		{
+			auto* actor = layer->findActor(name);
+			if (actor)
+				return actor;
+		}
+		return nullptr;
+	}
 }

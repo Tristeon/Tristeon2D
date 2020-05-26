@@ -3,9 +3,12 @@
 #include "Callbacks/IUpdate.h"
 #include <Serialization/TypeRegister.h>
 #include <Registers/BehaviourRegister.h>
+
+#include "Actors/AnimationSprite.h"
+
 namespace Demo
 {
-	class Weapon : public Tristeon::Behaviour, public Tristeon::IUpdate
+	class Weapon : public Tristeon::Behaviour, public Tristeon::IStart, public Tristeon::IUpdate
 	{
 		REGISTER_TYPE_H(Weapon);
 		REGISTER_BEHAVIOUR_H(Weapon);
@@ -13,12 +16,16 @@ namespace Demo
 	public:
 		json serialize() override;
 		void deserialize(json j) override;
+
+		void start() override;
 		void update() override;
 
 		void shoot(float strength);
 
 		bool isCharging() const { return charging; }
 	private:
+		Tristeon::AnimationSprite* chargeBar = nullptr;
+		
 		bool charging = false;
 		float time = 0;
 
