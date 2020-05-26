@@ -1,5 +1,7 @@
 #include "Projectile.h"
 
+
+#include "DamageText.h"
 #include "Enemies/Enemy.h"
 
 namespace Demo
@@ -25,6 +27,8 @@ namespace Demo
 	{
 		if (other->getOwner<Enemy>())
 		{
+			DamageText::drawDamage(position, damage);
+			
 			other->getOwner<Enemy>()->damage(damage, source);
 		}
 

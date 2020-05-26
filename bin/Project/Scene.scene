@@ -11,7 +11,7 @@
             "y": 1080
         },
         "typeID": "Tristeon::Camera",
-        "zoom": 1.5439813137054443
+        "zoom": 1.6760001182556152
     },
     "hud": {
         "typeID": "Tristeon::HUD"
@@ -4457,7 +4457,7 @@
                             "typeID": "Demo::PlayerAnimations"
                         },
                         {
-                            "maximumYVelocity": 40.0,
+                            "maximumYVelocity": 25.0,
                             "typeID": "Demo::Glider"
                         },
                         {
@@ -4610,7 +4610,7 @@
                             "typeID": "Tristeon::CircleCollider"
                         }
                     ],
-                    "chaseSpeed": 300.0,
+                    "chaseSpeed": 200.0,
                     "clipPath": "Project/CockroachWalk.clip",
                     "colour": {
                         "a": 1.0,
@@ -4672,7 +4672,7 @@
                             "typeID": "Tristeon::CircleCollider"
                         }
                     ],
-                    "chaseSpeed": 300.0,
+                    "chaseSpeed": 200.0,
                     "clipPath": "Project/CockroachWalk.clip",
                     "colour": {
                         "a": 1.0,
@@ -4734,7 +4734,7 @@
                             "typeID": "Tristeon::CircleCollider"
                         }
                     ],
-                    "chaseSpeed": 300.0,
+                    "chaseSpeed": 150.0,
                     "clipPath": "Project/MouseWalk.clip",
                     "colour": {
                         "a": 1.0,
