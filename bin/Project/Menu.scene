@@ -1,0 +1,150 @@
+{
+    "camera": {
+        "position": {
+            "typeID": "Tristeon::Vector2Int",
+            "x": -61,
+            "y": 426
+        },
+        "size": {
+            "typeID": "Tristeon::Vector2Int",
+            "x": 1920,
+            "y": 1080
+        },
+        "typeID": "Tristeon::Camera",
+        "zoom": 0.7097466588020325
+    },
+    "hud": {
+        "typeID": "Tristeon::HUD"
+    },
+    "layers": [
+        {
+            "actors": [
+                {
+                    "behaviours": [],
+                    "clipPath": "Project/MenuBackground.clip",
+                    "colour": {
+                        "a": 1.0,
+                        "b": 1.0,
+                        "g": 1.0,
+                        "r": 1.0,
+                        "typeID": "Tristeon::Colour"
+                    },
+                    "display": true,
+                    "flipX": false,
+                    "flipY": false,
+                    "height": 3000,
+                    "name": "Background",
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "texturePath": "project/menuspritesheet.png",
+                    "typeID": "Tristeon::AnimationSprite",
+                    "width": 3000
+                },
+                {
+                    "behaviours": [],
+                    "colour": {
+                        "a": 1.0,
+                        "b": 1.0,
+                        "g": 1.0,
+                        "r": 1.0,
+                        "typeID": "Tristeon::Colour"
+                    },
+                    "display": true,
+                    "flipX": false,
+                    "flipY": false,
+                    "height": 378,
+                    "name": "Logo",
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 0.0,
+                        "y": 800.0
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "texturePath": "project/title.png",
+                    "typeID": "Tristeon::Sprite",
+                    "width": 1702
+                },
+                {
+                    "behaviours": [],
+                    "colour": {
+                        "a": 1.0,
+                        "b": 1.0,
+                        "g": 1.0,
+                        "r": 1.0,
+                        "typeID": "Tristeon::Colour"
+                    },
+                    "display": true,
+                    "flipX": false,
+                    "flipY": false,
+                    "height": 309,
+                    "name": "Start Game",
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 5.0,
+                        "y": 350.0
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "texturePath": "project/startbutton.png",
+                    "typeID": "Demo::StartGame",
+                    "width": 637
+                },
+                {
+                    "behaviours": [],
+                    "colour": {
+                        "a": 1.0,
+                        "b": 1.0,
+                        "g": 1.0,
+                        "r": 1.0,
+                        "typeID": "Tristeon::Colour"
+                    },
+                    "display": true,
+                    "flipX": false,
+                    "flipY": false,
+                    "height": 309,
+                    "name": "Exit",
+                    "position": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "rotation": 0.0,
+                    "scale": {
+                        "typeID": "Tristeon::Vector2",
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "texturePath": "project/exitbutton.png",
+                    "typeID": "Demo::Exit",
+                    "width": 637
+                }
+            ],
+            "name": "Objects",
+            "typeID": "Tristeon::ActorLayer"
+        },
+        {
+            "actors": [],
+            "name": "New ActorLayer",
+            "typeID": "Tristeon::ActorLayer"
+        }
+    ],
+    "typeID": "Tristeon::Scene"
+}

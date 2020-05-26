@@ -30,7 +30,7 @@ namespace Tristeon
 		
 		//SceneManager must be loaded last because its components can rely on any of the previously created subsystems
 		//SceneManager::saveTestScene();
-		SceneManager::load("Scene");
+		SceneManager::load("Menu");
 
 		auto lastTime = std::chrono::high_resolution_clock::now();
 		uint frames = 0;

@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": -269,
-            "y": 98
+            "x": -36,
+            "y": 5
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
