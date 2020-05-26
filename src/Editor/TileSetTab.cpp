@@ -1,5 +1,6 @@
-﻿#include "TileSetTab.h"
+﻿#ifdef TRISTEON_EDITOR
 
+#include "TileSetTab.h"
 
 #include <qformlayout.h>
 #include <qgridlayout.h>
@@ -97,3 +98,5 @@ void TristeonEditor::TileSetTab::clearSelection()
 	selectedTile.index = -1;
 	tileHighlight->hide();
 }
+
+#endif

@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": -83,
-            "y": 234
+            "x": -34,
+            "y": 138
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -11,7 +11,7 @@
             "y": 1080
         },
         "typeID": "Tristeon::Camera",
-        "zoom": 1.6519999504089355
+        "zoom": 1.7000000476837158
     },
     "hud": {
         "typeID": "Tristeon::HUD"
@@ -4457,7 +4457,7 @@
                             "typeID": "Demo::PlayerAnimations"
                         },
                         {
-                            "maximumYVelocity": 25.0,
+                            "maximumYVelocity": 15.0,
                             "typeID": "Demo::Glider"
                         },
                         {
@@ -4816,8 +4816,8 @@
                     "patrolSpeed": 200.0,
                     "position": {
                         "typeID": "Tristeon::Vector2",
-                        "x": 1758.5533447265625,
-                        "y": 485.49029541015625
+                        "x": 1753.732421875,
+                        "y": 405.27001953125
                     },
                     "rotation": -0.0,
                     "scale": {
