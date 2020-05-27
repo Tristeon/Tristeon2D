@@ -17,7 +17,6 @@
 
 #include "Actors/Actor.h"
 
-
 namespace Tristeon
 {
 	void Engine::run()

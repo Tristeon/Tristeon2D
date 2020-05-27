@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": -36,
-            "y": 5
+            "x": 5238,
+            "y": 486
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -4537,7 +4537,7 @@
                 {
                     "behaviours": [
                         {
-                            "nextScene": "scene2",
+                            "nextScene": "Victory",
                             "typeID": "Demo::NextLevelSign"
                         },
                         {

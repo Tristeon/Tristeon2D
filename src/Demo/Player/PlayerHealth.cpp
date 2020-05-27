@@ -51,7 +51,7 @@ namespace Demo
 				}
 				else
 				{
-					Tristeon::SceneManager::reload();
+					Tristeon::SceneManager::load("Menu");
 				}
 			}
 		}
