@@ -20,6 +20,9 @@ namespace Demo
 		j["wallCheckDistance"] = wallCheckDistance;
 		j["floorCheckDistance"] = floorCheckDistance;
 		j["floorCheckOffset"] = floorCheckOffset;
+
+		j["aggroAnim"] = aggroAnim;
+		j["deathAnim"] = deathAnim;
 		return j;
 	}
 
@@ -32,10 +35,15 @@ namespace Demo
 		wallCheckDistance = j["wallCheckDistance"];
 		floorCheckDistance = j["floorCheckDistance"];
 		floorCheckOffset = j["floorCheckOffset"];
+
+		aggroAnim = j.value("aggroAnim", "");
+		deathAnim = j.value("deathAnim", "");
 	}
 
 	void GroundEnemy::aggro(Tristeon::Player* player)
 	{
+		setAnimationClip(aggroAnim);
+		
 		pb->setVelocity(Tristeon::Math::sign((player->position - position).x) * chaseSpeed, pb->velocity().y);
 	}
 
@@ -51,6 +59,7 @@ namespace Demo
 
 	void GroundEnemy::die()
 	{
+		setAnimationClip(deathAnim);
 		destroy();
 	}
 }

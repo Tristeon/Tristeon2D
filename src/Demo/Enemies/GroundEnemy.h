@@ -29,6 +29,9 @@ namespace Demo
 		float wallCheckDistance = 0;
 		float floorCheckDistance = 0;
 		float floorCheckOffset = 0;
+
+		Tristeon::String aggroAnim;
+		Tristeon::String deathAnim;
 	};
 }
 

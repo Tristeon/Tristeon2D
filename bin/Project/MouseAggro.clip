@@ -1,6 +1,6 @@
 {
-    "cols": 2,
-    "endIndex": 5,
+    "cols": 11,
+    "endIndex": 20,
     "loops": true,
     "playbackRate": 1.0,
     "rows": 3,
@@ -12,7 +12,7 @@
         "top": 0,
         "verticalFrame": 0
     },
-    "startIndex": 4,
-    "texturePath": "Project/Enemy1.png",
+    "startIndex": 11,
+    "texturePath": "Project/Enemy2.png",
     "typeID": "Tristeon::AnimationClip"
 }

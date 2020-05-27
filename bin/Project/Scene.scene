@@ -2,8 +2,8 @@
     "camera": {
         "position": {
             "typeID": "Tristeon::Vector2Int",
-            "x": 5238,
-            "y": 486
+            "x": 1276,
+            "y": 281
         },
         "size": {
             "typeID": "Tristeon::Vector2Int",
@@ -4584,6 +4584,7 @@
                     "width": 86
                 },
                 {
+                    "aggroAnim": "Project/CockroachAggro.clip",
                     "attack": 25,
                     "behaviours": [
                         {
@@ -4620,6 +4621,7 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "deathAnim": "",
                     "display": true,
                     "flipX": false,
                     "flipY": false,
@@ -4646,6 +4648,7 @@
                     "width": 128
                 },
                 {
+                    "aggroAnim": "Project/CockroachAggro.clip",
                     "attack": 25,
                     "behaviours": [
                         {
@@ -4682,6 +4685,7 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "deathAnim": "",
                     "display": true,
                     "flipX": true,
                     "flipY": false,
@@ -4708,6 +4712,7 @@
                     "width": 128
                 },
                 {
+                    "aggroAnim": "Project/MouseAggro.clip",
                     "attack": 25,
                     "behaviours": [
                         {
@@ -4744,6 +4749,7 @@
                         "r": 1.0,
                         "typeID": "Tristeon::Colour"
                     },
+                    "deathAnim": "",
                     "display": true,
                     "flipX": false,
                     "flipY": false,

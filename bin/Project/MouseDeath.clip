@@ -1,9 +1,9 @@
 {
-    "cols": 2,
-    "endIndex": 5,
-    "loops": true,
+    "cols": 4,
+    "endIndex": 3,
+    "loops": false,
     "playbackRate": 1.0,
-    "rows": 3,
+    "rows": 1,
     "spacing": {
         "bottom": 0,
         "horizontalFrame": 0,
@@ -12,7 +12,7 @@
         "top": 0,
         "verticalFrame": 0
     },
-    "startIndex": 4,
-    "texturePath": "Project/Enemy1.png",
+    "startIndex": 0,
+    "texturePath": "Project/Ratdeath.png",
     "typeID": "Tristeon::AnimationClip"
 }
